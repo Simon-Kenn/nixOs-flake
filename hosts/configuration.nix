@@ -2,15 +2,74 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, ... }:
-let
-  user="simon";
-in
+{ config, lib, pkgs, inputs, user, ... }:
+
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  users.users.${user} = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "video" "audio" "kvm" "networkmanager"]; 
+    initialPassword = "password";
+    shell = pkgs.zsh;
+    packages = with pkgs; [
+      firefox
+    ];
+  };
+  security.sudo.wheelNeedsPassword = false;
+
+  time.timeZone = "Europe/Paris";
+
+  i18n.defaultLocale = "fr_FR.UTF-8";
+
+  console = {
+     font = "Lat2-Terminus16";
+     keyMap = "fr-bepo";
+  };
+
+  fonts.fonts = with pkgs; [
+    nerdfonts
+  ];  
+
+  environment = {
+    variables = {
+      # TERIMAL = "";
+      EDITOR = "vim";
+      VISUAL = "vim";
+    };
+  };
+
+  services = {
+    xserver = {
+      enable = true;
+      videoDrivers = ["amdgpu"];
+      displayManager = {
+        gdm.enable = true;
+      };
+      desktopManager = {
+        gnome.enable = true;
+      };
+      layout = "fr";
+      xkbVariant = "bepo";
+    };
+    flatpak.enable = true;
+  };
+
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 2-"
+    };
+    package = pkgs.nixFlakes;
+    extraOptions = "experimental-features = nix-command flakes";
+  };
 
   boot = {
     loader = {
@@ -36,38 +95,9 @@ in
     networkmanager.enable = true;
   };
 
-  time.timeZone = "Europe/Paris";
-
-  i18n.defaultLocale = "fr_FR.UTF-8";
-  console = {
-     font = "Lat2-Terminus16";
-     keyMap = "fr-bepo";
-  #   useXkbConfig = true; # use xkbOptions in tty.
-  };
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkbOptions in tty.
-  # };
-
+  
   # Enable the X11 windowing system.
-  services = {
-    xserver = {
-      enable = true;
-      videoDrivers = ["amdgpu"];
-      displayManager = {
-        gdm.enable = true;
-      };
-      desktopManager = {
-        gnome.enable = true;
-      };
-      layout = "fr";
-      xkbVariant = "bepo";
-    };
-    flatpak.enable = true;
-  };
+  
 
   sound.enable = true;
   hardware = {
@@ -75,18 +105,7 @@ in
     opengl.driSupport = true;
   };  
 
-  users.users.${user} = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
-     initialPassword = "password";
-     packages = with pkgs; [
-       firefox
-     ];
-   };
-  
-  fonts.fonts = with pkgs; [
-    nerdfonts
-  ];
+    
 
   nixpkgs.config.allowUnfree = true;
 
@@ -134,9 +153,5 @@ in
      })
    ];
   
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = "experimental-features = nix-command flakes";
-  };
-}
+  }
 
