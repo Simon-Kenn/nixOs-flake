@@ -3,9 +3,14 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    home-manager = {
+	    url = github:nix-community/home-manager;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, home-manager }:
     let
+      user = "simon";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -16,7 +21,16 @@
       nixosConfigurations = {
         star-end = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration.nix ];
+          modules = [ 
+            ./configuration.nix 
+            home-manager.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.${user} = {
+                imports = [ ./home.nix ];
+              };
+            }
+          ];
         };
       };
     };
