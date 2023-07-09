@@ -14,8 +14,23 @@ let
   };
 
   lib = nixpkgs.lib;
+
+  hostName = "Babel";
 in
 {
+  babel = lib.nixosSystem {
+    inherit system;
+    specialArgs = {
+      inherit inputs unstable system user location hostName;
+      host = {
+        hostName = ${hostName};
+      };
+    };
+    modules = [
+      ./babel
+      ./configuration.nix
+    ];
+  };
   star-end = lib.nixosSystem {
     inherit system;
     specialArgs = {

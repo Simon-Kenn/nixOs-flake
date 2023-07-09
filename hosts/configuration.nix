@@ -36,10 +36,7 @@
   systemPackages = with pkgs; [
     vim
     git
-    killall
-    nano
     pciutils
-    usbutils
     wget
   ];
   services = {

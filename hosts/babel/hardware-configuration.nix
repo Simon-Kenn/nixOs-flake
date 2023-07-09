@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ config, lib, pkgs, modulesPath, hostName, ... }:
 
 {
   imports =
@@ -32,7 +32,7 @@
 
   networking = {
     useDHCP = false;
-    hostName = "babel";
+    hostName = ${hostName};
     interfaces = {
       enps50.useDHCP = lib.mkDefault true;
     };
