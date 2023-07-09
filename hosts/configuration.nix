@@ -10,7 +10,6 @@
       firefox
     ];
   };
-  security.sudo.wheelNeedsPassword = false;
 
   time.timeZone = "Europe/Paris";
 
@@ -31,14 +30,13 @@
       EDITOR = "vim";
       VISUAL = "vim";
     };
-  };
-
-  systemPackages = with pkgs; [
+    systemPackages = with pkgs; [
     vim
     git
     pciutils
     wget
-  ];
+    ];
+  };
   services = {
     xserver = {
       enable = true;
@@ -67,11 +65,12 @@
     package = pkgs.nixVersions.unstable;
     registry.nixpkgs.flake = inputs.nixpkgs;
     extraOptions = ''
-      experimental-features = nix-command flakes"
+      experimental-features = nix-command flakes
       keep-outputs          = true
       keep-derivations      = true
     '';
   };
+  nixpkgs.config.allowUnfree = true;
 
   system = {
     autoUpgrade = {
