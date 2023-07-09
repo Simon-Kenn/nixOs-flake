@@ -15,15 +15,14 @@ let
 
   lib = nixpkgs.lib;
 
-  hostName = "Babel";
 in
 {
   babel = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs unstable system user location hostName;
+      inherit inputs unstable system user location;
       host = {
-        hostName = ${hostName};
+        hostName = "Babel";
       };
     };
     modules = [
