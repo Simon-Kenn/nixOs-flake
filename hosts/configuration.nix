@@ -5,10 +5,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "audio" "kvm" "networkmanager"]; 
     initialPassword = "password";
-    # shell = pkgs.zsh;
-    packages = with pkgs; [
-      firefox
-    ];
+    shell = pkgs.zsh;
   };
 
   time.timeZone = "Europe/Paris";
@@ -36,6 +33,10 @@
     pciutils
     wget
     ];
+  };
+
+  programs = {
+    zsh.enable = true;
   };
   services = {
     xserver = {

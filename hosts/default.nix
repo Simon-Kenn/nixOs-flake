@@ -28,6 +28,21 @@ in
     modules = [
       ./babel
       ./configuration.nix
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = {
+          inherit unstable user;
+          host = {
+            hostname = "Babel";
+          };
+        };
+        home-manager.users.${user} = {
+          imports = [
+            ./home.nix
+          ];
+        };
+      }
     ];
   };
   star-end = lib.nixosSystem {
