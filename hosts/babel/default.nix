@@ -1,7 +1,8 @@
 { pkgs, lib, user, ... }:
 {
   imports = 
-    [(import ./hardware-configuration.nix)];
+    [(import ./hardware-configuration.nix)]++
+    [(import ../../modules/desktop/gnome/default.nix)];
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;

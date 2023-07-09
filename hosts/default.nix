@@ -40,6 +40,7 @@ in
         home-manager.users.${user} = {
           imports = [
             ./home.nix
+            ./babel/home.nix
           ];
         };
       }

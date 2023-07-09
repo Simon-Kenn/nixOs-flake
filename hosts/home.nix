@@ -1,6 +1,6 @@
 { config, lib, pkgs, unstable, user, ... }:
 {
-  imports =
+  imports = 
     (import ../modules/programs);
 
   home = {
