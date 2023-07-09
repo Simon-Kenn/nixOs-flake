@@ -12,7 +12,7 @@
   };
   outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home-manager }:
     let
-      user = "simon";
+      user = "Empereur-Dieu";
       location = "$HOME/Projets/nixosOs";
     in {
         nixosConfigurations = (

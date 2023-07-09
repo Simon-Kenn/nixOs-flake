@@ -25,6 +25,7 @@ in
       };
     };
     modules = [
+      ./star-end
       ./configuration.nix
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
@@ -35,11 +36,11 @@ in
             hostname = "star-end";
           };
         };
-        home-manager.users.${user} = {
-          imports = [
-            ./home.nix
-          ];
-        };
+        #home-manager.users.${user} = {
+        #  imports = [
+        #    ./home.nix
+        #  ];
+        #};
       }
     ];
   };
