@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, nixpkgs-unstable, home-manager, user, location }:
+{ lib, inputs, nixpkgs, nixpkgs-unstable, home-manager, hyprland, user, location }:
 
 let
   system = "x86_64-linux";
@@ -23,6 +23,8 @@ in
       inherit inputs unstable system user location;
       host = {
         hostName = "Babel";
+        mainMonitor = "DP-1";
+        secondMonitor = "HDMI-A-1";
       };
     };
     modules = [
@@ -35,6 +37,8 @@ in
           inherit unstable user;
           host = {
             hostname = "Babel";
+            mainMonitor = "DP-1";
+            secondMonitor = "HDMI-A-1";
           };
         };
         home-manager.users.${user} = {
@@ -52,6 +56,8 @@ in
       inherit inputs unstable system user location;
       host = {
         hostName = "desktop";
+        mainMonitor = "DP-1";
+        secondMonitor = "HDMI-A-1";
       };
     };
     modules = [
