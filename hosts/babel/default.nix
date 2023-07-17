@@ -45,5 +45,4 @@
       driSupport32Bit = true;
     };
   };
-
 }
