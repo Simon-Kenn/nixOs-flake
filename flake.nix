@@ -67,17 +67,5 @@
           modules = babel_modules;
         }; 
       };
-      #nixosConfigurations = let system = x64_system; specialArgs = x64_specialArgs; in {
-      #  babel = nixpkgs.lib.nixosSystem {
-      #    inherit system specialArgs;
-      #    modules = babel_modules;
-      #  };
-      #};
-      #  nixosConfigurations = (
-      #  import ./hosts {
-      #    inherit (nixpkgs) lib;
-      #    inherit inputs nixpkgs nixpkgs-unstable home-manager hyprland user location;
-      #   }
-      #);
     };
 }
