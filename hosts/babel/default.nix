@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
     ../../modules/core-desktop.nix
     ../../modules/gnome.nix
-    # ../../modules/zsh.nix
+    ../../modules/users.nix
   ];  
 
   boot = {
@@ -16,7 +16,6 @@
 
     loader = {
       efi = {
-        # canTouchEfiVariables = true;
         efiSysMountPoint = "/boot/efi";
       };
       grub = {

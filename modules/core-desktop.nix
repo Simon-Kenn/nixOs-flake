@@ -1,12 +1,5 @@
 { lib, pkgs, inputs, user, ... }:
 {
-  users.users.${user} = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "kvm" "networkmanager"]; 
-    initialPassword = "password";
-    shell = pkgs.zsh;
-  };
-
   time.timeZone = "Europe/Paris";
 
   i18n.defaultLocale = "fr_FR.UTF-8";
