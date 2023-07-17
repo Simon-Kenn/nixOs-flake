@@ -3,6 +3,7 @@
 
   imports = [
     ./vim
+    ./zsh.nix
   ];
   home = {
     username = "${user}";

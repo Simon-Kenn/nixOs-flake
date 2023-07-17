@@ -20,33 +20,59 @@
       user = "simon";
       location = "$HOME/Projets/nixosOs";
 
-      x64_system = "x86_64-linux";
-      x64_specialArgs = {
-        pkgs-unstable = import inputs.nixpkgs-unstable {
-          system = x64_system;
-          config.allowUnfree = true;
-        };
+      system = "x86_64-linux";
+      
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
       };
-      star-end_modules = [
-        ./hosts/star-end
+      
+      unstable = nixpkgs.unstable {
+      inherit system;
+      config.allowUnfree = true;
+      };
 
-        #home-manager.nixosModules.home-manager
-        #{
-        #  home-manager.useGlobalPkgs = true;
-        #  home-manager.useUserPackages = true;
+      lib = nixpkgs.lib;
 
-        #  home-manager.extraSpecialArgs = x64_specialArgs;
-        #  # home-manager.user.${user} = import ./
-        #}
+      babel_modules = [
+        ./hosts/babel
+
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = {
+          inherit unstable user;
+          host = {
+            hostname = "Babel";
+            mainMonitor = "DP-1";
+            secondMonitor = "HDMI-A-1";
+          };
+        };
+          home-manager.users.${user} = import ./home/x11.nix;
+        }
       ];
-
+      specialArgs = {
+            inherit inputs unstable system user location;
+	    host = {
+              hostName = "Babel";
+              mainMonitor = "DP-1";
+              secondMonitor = "HDMI-A-1";
+            };
+          };
     in {
-      nixosConfiguration = let system = x64_system; specialArgs = x64_specialArgs; in {
-        star-end = nixpkgs.lib.nixosSystem {
-          inherit system specialArgs user location;
-          modules = star-end_modules;
-        };
+      nixosConfigurations = {
+        babel = lib.nixosSystem {
+          inherit system specialArgs;
+          modules = babel_modules;
+        }; 
       };
+      #nixosConfigurations = let system = x64_system; specialArgs = x64_specialArgs; in {
+      #  babel = nixpkgs.lib.nixosSystem {
+      #    inherit system specialArgs;
+      #    modules = babel_modules;
+      #  };
+      #};
       #  nixosConfigurations = (
       #  import ./hosts {
       #    inherit (nixpkgs) lib;
