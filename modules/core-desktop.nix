@@ -24,6 +24,9 @@
     git
     pciutils
     wget
+    curl
     ];
   };
+
+  sound.enable = true;
 }
