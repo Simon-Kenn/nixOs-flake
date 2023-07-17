@@ -9,7 +9,6 @@ in
 
       plugins = with pkgs; [
         plugins.catppuccin
-        nerdtree
       ];
 
       extraConfig = builtins.readFile ./vimrc;
