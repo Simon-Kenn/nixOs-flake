@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, user, ... }:
+{ pkgs, ... }:
 {
   time.timeZone = "Europe/Paris";
 
@@ -25,51 +25,5 @@
     pciutils
     wget
     ];
-  };
-
-  #programs = {
-  #  zsh.enable = true;
-  #};
-  #services = {
-  #  xserver = {
-  #    enable = true;
-  #    videoDrivers = ["amdgpu"];
-  #    displayManager = {
-  #      gdm.enable = true;
-  #    };
-  #    desktopManager = {
-  #      gnome.enable = true;
-  #    };
-  #    layout = "fr";
-  #    xkbVariant = "bepo";
-  #  };
-  #  flatpak.enable = true;
-  #};
-
-  nix = {
-    settings = {
-      auto-optimise-store = true;
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 2d";
-    };
-    package = pkgs.nixVersions.unstable;
-    registry.nixpkgs.flake = inputs.nixpkgs;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-      keep-outputs          = true
-      keep-derivations      = true
-    '';
-  };
-  nixpkgs.config.allowUnfree = true;
-
-  system = {
-    autoUpgrade = {
-      enable = true;
-      channel = "https://nixos.org/channels/nixos-unstable";
-    }; 
-    stateVersion = "23.05"; # Did you read the comment?
   };
 }

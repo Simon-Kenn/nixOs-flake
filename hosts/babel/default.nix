@@ -6,6 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/core-desktop.nix
+    ../../modules/nix-os.nix
     ../../modules/gnome.nix
     ../../modules/users.nix
   ];  
