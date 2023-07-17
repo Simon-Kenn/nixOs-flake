@@ -28,6 +28,7 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault false;
   networking.interfaces.enp5s0.useDHCP = lib.mkDefault true;
+  networking.hostName = "Babel";
   # networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
 
   #networking = {
