@@ -4,6 +4,7 @@
   imports = [
     ./vim
     ./zsh.nix
+    ./kitty.nix
   ];
   home = {
     username = "${user}";
