@@ -6,7 +6,9 @@
     ./zsh.nix
     ./kitty.nix
     ./starship.nix
+    ./git.nix
   ];
+
   home = {
     username = "${user}";
     homeDirectory = "/home/${user}";
@@ -20,6 +22,7 @@
       logseq
     ];
   };
+
   programs = {
     home-manager.enable = true;
   };
