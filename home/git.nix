@@ -33,6 +33,9 @@
 
     aliases = {
       a = "add";
+      b = "branch";
+      bc = "branch -c";
+      ch = "checkout";
       c = "commit";
       ca = "commit --amend";
       can = "commit --amend --no-edit";
