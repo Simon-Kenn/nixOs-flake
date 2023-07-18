@@ -5,6 +5,7 @@
     ./vim
     ./zsh.nix
     ./kitty.nix
+    ./starship.nix
   ];
   home = {
     username = "${user}";

@@ -15,12 +15,7 @@
 
       initExtra = ''                            # Zsh theme
         # Spaceship
-        source ${pkgs.spaceship-prompt}/share/zsh/site-functions/prompt_spaceship_setup
-        autoload -U promptinit; promptinit
-        # Hook direnv
-        #emulate zsh -c "$(direnv hook zsh)"
-
-        #eval "$(direnv hook zsh)"
+        eval "$(starship init zsh)"
       '';
     };
   };
