@@ -14,7 +14,7 @@ set visualbell
 set hidden " ne pas demander pour changer de buffer
 set relativenumber number
 set foldmethod=indent
-colorscheme catppuccin_mocha
+colorscheme catppuccin_frappe
 
 
 " Tabs is whitespace
