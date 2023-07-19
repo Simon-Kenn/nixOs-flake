@@ -1,6 +1,6 @@
 { config, lib, pkgs, host, ...}:
 {
-  wayland.windomManager.hyprland = {
+  wayland.windowManager.hyprland = {
     extraConfig = builtins.readFile ./hyprland.conf;
   };  
 }
