@@ -18,7 +18,8 @@
   outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home-manager, hyprland }:
     let
       user = "simon";
-      desktop = "hyprland";
+      desktop = "gnome";
+#      desktop = "hyprland";
       location = "$HOME/Projets/nixosOs";
 
       system = "x86_64-linux";

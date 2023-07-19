@@ -1,4 +1,4 @@
-{ config, lib, pkgs, desktop, user, ... }:
+{ config, inputs, lib, pkgs, desktop, user, ... }:
 {
 
   imports = [

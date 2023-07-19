@@ -28,5 +28,9 @@
     ];
   };
 
+  programs = {
+    zsh.enable = true;
+  };
+
   sound.enable = true;
 }

@@ -1,6 +1,11 @@
-{ config, lib, pkgs, host, ...}:
+{ config, inputs, lib, pkgs, host, hyprland, ...}:
 {
-  wayland.windowManager.hyprland = {
-    extraConfig = builtins.readFile ./hyprland.conf;
-  };  
+  #imports = [
+  #  inputs.hyprland.homeManagerModules.default
+  #];
+
+  #wayland.windowManager.hyprland = {
+  #  enable = true;
+  ##  extraConfig = builtins.readFile ./hyprland.conf;
+  #};  
 }
