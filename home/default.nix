@@ -1,4 +1,4 @@
-{ config, lib, pkgs, unstable, user, ... }:
+{ config, lib, pkgs, desktop, user, ... }:
 {
 
   imports = [
@@ -7,6 +7,7 @@
     ./kitty.nix
     ./starship.nix
     ./git.nix
+    ./desktop/${desktop}.nix
   ];
 
   home = {

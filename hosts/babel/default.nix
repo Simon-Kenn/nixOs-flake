@@ -1,14 +1,14 @@
 # ######################## # 
 #  Star-end                       
 # ######################## #
-{ pkgs, ... }:
+{ pkgs, desktop, ... }:
 {
   imports = [
     ./hardware-configuration.nix
     ../../modules/core-desktop.nix
     ../../modules/nix-os.nix
     ../../modules/users.nix
-    ../../modules/gnome.nix
+    ../../modules/desktop/${desktop}.nix
   ];  
 
   boot = {

@@ -18,6 +18,7 @@
   outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home-manager, hyprland }:
     let
       user = "simon";
+      desktop = "gnome";
       location = "$HOME/Projets/nixosOs";
 
       system = "x86_64-linux";
@@ -42,18 +43,18 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {
-          inherit unstable user;
+          inherit unstable user hyprland desktop location;
           host = {
             hostname = "Babel";
             mainMonitor = "DP-1";
             secondMonitor = "HDMI-A-1";
           };
         };
-          home-manager.users.${user} = import ./home/x11.nix;
+          home-manager.users.${user} = import ./home/default.nix;
         }
       ];
       specialArgs = {
-            inherit inputs unstable system user location;
+            inherit inputs unstable system user desktop location hyprland;
 	    host = {
               hostName = "Babel";
               mainMonitor = "DP-1";
