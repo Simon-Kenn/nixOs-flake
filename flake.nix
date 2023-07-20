@@ -29,9 +29,9 @@
         config.allowUnfree = true;
       };
       
-      unstable = nixpkgs.unstable {
-      inherit system;
-      config.allowUnfree = true;
+      unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
       };
 
       lib = nixpkgs.lib;

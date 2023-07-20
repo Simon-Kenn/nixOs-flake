@@ -1,7 +1,8 @@
 # ######################## # 
 #  Star-end                       
 # ######################## #
-{ pkgs, desktop, ... }:
+
+{ pkgs, desktop, host, unstable, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -13,7 +14,13 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
+
     initrd.kernelModules = [ "amdgpu" ];
+
+    kernelParams = with host; [
+      "video=${mainMonitor}:1920x1080@60"
+      "video=${secondMonitor}:1920x1080@60"
+    ];
 
     loader = {
       efi = {
@@ -36,13 +43,16 @@
   hardware = {
     pulseaudio.enable = true;
     opengl = {
-    enable = true;
+      enable = true;
       extraPackages = with pkgs; [
         rocm-opencl-icd
         rocm-opencl-runtime
+        amdvlk
       ];
       driSupport = true;
+      #package = unstable.mesa.drivers;
       driSupport32Bit = true;
+      #package32 = unstable.pkgsi686Linux.mesa.drivers;
     };
   };
 }
