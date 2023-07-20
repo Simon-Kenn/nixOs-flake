@@ -7,6 +7,7 @@
     ./kitty.nix
     ./starship.nix
     ./git.nix
+    ./neovim
     ./desktop/${desktop}.nix
   ];
 

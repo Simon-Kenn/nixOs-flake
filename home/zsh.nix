@@ -17,6 +17,7 @@
         # Spaceship
         eval "$(starship init zsh)"
       '';
+
     };
   };
 }
