@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nvim.url = "github:Zarthoustra42/neovim-flake";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-23.05";
@@ -20,7 +19,6 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
-    nvim,
     home-manager,
     hyprland,
   }: let
@@ -51,7 +49,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit unstable user hyprland nvim desktop location;
+          inherit unstable user hyprland desktop location;
           host = {
             hostname = "Babel";
             mainMonitor = "DP-1";
