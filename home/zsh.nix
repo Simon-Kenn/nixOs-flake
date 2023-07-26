@@ -18,6 +18,10 @@
         eval "$(starship init zsh)"
       '';
 
+      shellAliases = {
+        nvim = "nix run ~/Projets/config/neovim --";
+      };
+
     };
   };
 }
