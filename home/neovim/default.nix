@@ -1,8 +1,5 @@
-{ pkgs, ... }:
 {
-  programs = {
-    neovim = {
-      enable = true;
-    };
-  };
-};
+  nvim
+}: {
+  nvim.enable = true;
+}

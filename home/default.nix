@@ -1,20 +1,22 @@
-{ config, inputs, lib, pkgs, desktop, user, ... }:
 {
-
+  pkgs,
+  desktop,
+  user,
+  ...
+}: {
   imports = [
     ./vim
     ./zsh.nix
     ./kitty.nix
     ./starship.nix
     ./git.nix
-    ./neovim
     ./desktop/${desktop}.nix
   ];
 
   home = {
     username = "${user}";
     homeDirectory = "/home/${user}";
-  
+
     stateVersion = "23.05";
 
     packages = with pkgs; [
@@ -29,4 +31,3 @@
     home-manager.enable = true;
   };
 }
-
