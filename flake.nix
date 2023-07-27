@@ -51,7 +51,7 @@
         home-manager.extraSpecialArgs = {
           inherit unstable user hyprland desktop location;
           host = {
-            hostname = "Babel";
+            hostname = "babel";
             mainMonitor = "DP-1";
             secondMonitor = "HDMI-A-1";
           };
@@ -62,7 +62,7 @@
     specialArgs = {
       inherit inputs unstable system user desktop location hyprland;
       host = {
-        hostName = "Babel";
+        hostName = "babel";
         mainMonitor = "DP-1";
         secondMonitor = "HDMI-A-1";
       };

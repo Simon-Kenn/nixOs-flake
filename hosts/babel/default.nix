@@ -1,21 +1,24 @@
-# ######################## # 
-#  Star-end                       
 # ######################## #
-
-{ pkgs, desktop, host, unstable, ... }:
+#  Star-end
+# ######################## #
 {
+  pkgs,
+  desktop,
+  host,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/core-desktop.nix
     ../../modules/nix-os.nix
     ../../modules/users.nix
     ../../modules/desktop/${desktop}.nix
-  ];  
+  ];
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
-    initrd.kernelModules = [ "amdgpu" ];
+    initrd.kernelModules = ["amdgpu"];
 
     kernelParams = with host; [
       "video=${mainMonitor}:1920x1080@60"
@@ -36,7 +39,7 @@
   };
 
   networking = {
-    hostName = "Babel";
+    hostName = "babel";
     networkmanager.enable = true;
   };
 
