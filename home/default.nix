@@ -11,6 +11,7 @@
     ./starship.nix
     ./git.nix
     ./desktop/${desktop}.nix
+    ./wofi.nix
   ];
 
   home = {
