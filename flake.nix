@@ -23,8 +23,8 @@
     hyprland,
   }: let
     user = "simon";
-    desktop = "gnome";
-    #desktop = "hyprland";
+    #desktop = "gnome";
+    desktop = "hyprland";
     location = "$HOME/Projets/nixosOs";
 
     system = "x86_64-linux";

@@ -10,10 +10,7 @@
     ./kitty.nix
     ./starship.nix
     ./git.nix
-    ./desktop/${desktop}.nix
-    ./wofi.nix
-    ./mako.nix
-    ./waybar.nix
+    ./desktop/hyprland.nix
   ];
 
   home = {
