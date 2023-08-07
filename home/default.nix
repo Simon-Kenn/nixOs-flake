@@ -13,6 +13,7 @@
     ./desktop/${desktop}.nix
     ./wofi.nix
     ./mako.nix
+    ./waybar.nix
   ];
 
   home = {
