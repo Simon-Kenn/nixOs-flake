@@ -12,6 +12,7 @@
     ./git.nix
     ./desktop/${desktop}.nix
     ./wofi.nix
+    ./mako.nix
   ];
 
   home = {
