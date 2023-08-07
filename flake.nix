@@ -49,7 +49,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit unstable user hyprland desktop location;
+          inherit unstable inputs user hyprland desktop location;
           host = {
             hostname = "babel";
             mainMonitor = "DP-1";
@@ -60,7 +60,7 @@
       }
     ];
     specialArgs = {
-      inherit inputs unstable system user desktop location hyprland;
+      inherit unstable inputs system user desktop location hyprland;
       host = {
         hostName = "babel";
         mainMonitor = "DP-1";

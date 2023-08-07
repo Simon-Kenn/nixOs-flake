@@ -1,10 +1,10 @@
 {
-  inputs,
   pkgs,
+  hyprland,
   ...
 }: {
   imports = [
-    inputs.hyprland.homeManagerModules.default
+    hyprland.homeManagerModules.default
   ];
 
   wayland.windowManager.hyprland = {
@@ -96,7 +96,6 @@
       exec=swaybg -m fill -i ~/.local/share/wallpapers/abstract_ghost.jpg
 
       # Source a file (multi-file configs)
-      source = ~/.config/hypr/macchiato.conf
 
       # WIMDOWS RULES #
       # ------------- #

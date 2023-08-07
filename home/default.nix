@@ -11,6 +11,9 @@
     ./starship.nix
     ./git.nix
     ./desktop/hyprland.nix
+    ./mako.nix
+    ./wofi.nix
+    ./waybar.nix
   ];
 
   home = {
