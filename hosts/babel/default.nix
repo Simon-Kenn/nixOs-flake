@@ -53,9 +53,7 @@
         amdvlk
       ];
       driSupport = true;
-      #package = unstable.mesa.drivers;
       driSupport32Bit = true;
-      #package32 = unstable.pkgsi686Linux.mesa.drivers;
     };
   };
 }
