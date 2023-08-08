@@ -1,6 +1,6 @@
 {
-  pkgs,
   hyprland,
+  host,
   ...
 }: {
   imports = [
@@ -10,8 +10,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = ''
-
-      input {
+      monitor=${host.mainMonitor}, 1920x1080@60, 0x0, 1
+      monitor=${host.secondMonitor}, 1920x1080@60, 1920x0, 1
+       input {
         kb_layout=fr
         kb_variant=bepo
         kb_model=
