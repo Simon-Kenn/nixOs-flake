@@ -5,8 +5,9 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/core-desktop.nix
     ../nix.nix
+    ../locale.nix
+    ../../modules/core-desktop.nix
     ../../modules/users.nix
     ../../modules/desktop/${host.desktop}.nix
   ];

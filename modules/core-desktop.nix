@@ -1,17 +1,12 @@
-{ pkgs, ... }:
-{
-  time.timeZone = "Europe/Paris";
-
-  i18n.defaultLocale = "fr_FR.UTF-8";
-
+{pkgs, ...}: {
   console = {
-     font = "Lat2-Terminus16";
-     keyMap = "fr-bepo";
+    font = "Lat2-Terminus16";
+    keyMap = "fr-bepo";
   };
 
   fonts.packages = with pkgs; [
     nerdfonts
-  ];  
+  ];
 
   environment = {
     variables = {
@@ -20,11 +15,11 @@
       VISUAL = "vim";
     };
     systemPackages = with pkgs; [
-    vim
-    git
-    pciutils
-    wget
-    curl
+      vim
+      git
+      pciutils
+      wget
+      curl
     ];
   };
 
