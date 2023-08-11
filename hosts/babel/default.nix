@@ -12,7 +12,6 @@
     ../sound.nix
     ../users.nix
     ../zsh.nix
-    ../../modules/core-desktop.nix
     ../../modules/desktop/${host.desktop}.nix
   ];
 
