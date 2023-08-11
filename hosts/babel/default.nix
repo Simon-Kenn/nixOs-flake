@@ -5,13 +5,13 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../nix.nix
-    ../locale.nix
-    ../console.nix
-    ../packages.nix
-    ../sound.nix
-    ../users.nix
-    ../zsh.nix
+    ../common/nix.nix
+    ../common/locale.nix
+    ../common/console.nix
+    ../common/packages.nix
+    ../common/sound.nix
+    ../common/shells/zsh.nix
+    ../users/simon.nix
     ../../modules/desktop/${host.desktop}.nix
   ];
 
