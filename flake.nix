@@ -37,38 +37,26 @@
     };
 
     lib = nixpkgs.lib;
-
-    babel_modules = [
-      ./hosts/babel
-
-      home-manager.nixosModules.home-manager
-      {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = {
-          inherit unstable inputs user hyprland desktop location;
-          host = {
-            hostname = "babel";
-            mainMonitor = "DP-1";
-            secondMonitor = "HDMI-A-1";
-          };
-        };
-        home-manager.users.${user} = import ./home/default.nix;
-      }
-    ];
-    specialArgs = {
-      inherit unstable inputs system user desktop location hyprland;
-      host = {
-        hostName = "babel";
-        mainMonitor = "DP-1";
-        secondMonitor = "HDMI-A-1";
-      };
+    host = {
+      hostName = "babel";
+      mainMonitor = "DP-1";
+      secondMonitor = "HDMI-A-1";
     };
   in {
     nixosConfigurations = {
       babel = lib.nixosSystem {
-        inherit system specialArgs;
-        modules = babel_modules;
+        specialArgs = {inherit unstable inputs system user desktop location hyprland host;};
+        modules = [
+          ./hosts/babel
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit unstable inputs user hyprland desktop location host;};
+            home-manager.users.${user} = import ./home/default.nix;
+          }
+        ];
       };
     };
   };
