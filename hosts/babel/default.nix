@@ -5,11 +5,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../common/nix.nix
-    ../common/locale.nix
-    ../common/console.nix
-    ../common/packages.nix
-    ../common/sound.nix
+    ../common
     ../common/shells/zsh.nix
     ../users/simon.nix
   ];
