@@ -12,40 +12,30 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
   };
+
   outputs = inputs @ {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     home-manager,
-    hyprland,
+    ...
   }: let
-    user = "simon";
-    #desktop = "gnome";
-    desktop = "hyprland";
-    location = "$HOME/Projets/nixosOs";
-
-    system = "x86_64-linux";
-
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-
-    unstable = import nixpkgs-unstable {
-      inherit system;
-      config.allowUnfree = true;
+    inherit (self) outputs;
+    host = {
+      name = "babel";
+      user = "simon";
+      desktop = "hyprland";
+      system = "x86_64-linux";
+      monitors = {
+        main = "DP-1";
+        second = "HDMI-A-1";
+      };
     };
 
     lib = nixpkgs.lib;
-    host = {
-      hostName = "babel";
-      mainMonitor = "DP-1";
-      secondMonitor = "HDMI-A-1";
-    };
   in {
     nixosConfigurations = {
       babel = lib.nixosSystem {
-        specialArgs = {inherit unstable inputs system user desktop location hyprland host;};
+        specialArgs = {inherit inputs outputs host;};
         modules = [
           ./hosts/babel
 
@@ -53,8 +43,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit unstable inputs user hyprland desktop location host;};
-            home-manager.users.${user} = import ./home/default.nix;
+            home-manager.extraSpecialArgs = {inherit inputs outputs host;};
+            home-manager.users.${host.user} = import ./home/default.nix;
           }
         ];
       };

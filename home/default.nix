@@ -1,7 +1,6 @@
 {
   pkgs,
-  desktop,
-  user,
+  host,
   ...
 }: {
   imports = [
@@ -10,15 +9,15 @@
     ./kitty.nix
     ./starship.nix
     ./git.nix
-    ./desktop/hyprland.nix
+    ./desktop/${host.desktop}.nix
     ./mako.nix
     ./wofi.nix
     ./waybar.nix
   ];
 
   home = {
-    username = "${user}";
-    homeDirectory = "/home/${user}";
+    username = "${host.user}";
+    homeDirectory = "/home/${host.user}";
 
     stateVersion = "23.05";
 

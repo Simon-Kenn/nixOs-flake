@@ -1,9 +1,11 @@
-{ pkgs, user, ...}:
 {
-  users.users.${user} = {
+  pkgs,
+  host,
+  ...
+}: {
+  users.users.${host.user} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "kvm" "networkmanager"]; 
-    initialPassword = "password";
+    extraGroups = ["wheel" "video" "audio" "kvm" "networkmanager"];
     shell = pkgs.zsh;
   };
 }

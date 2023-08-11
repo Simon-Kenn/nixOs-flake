@@ -1,9 +1,5 @@
-# ######################## #
-#  Star-end
-# ######################## #
 {
   pkgs,
-  desktop,
   host,
   ...
 }: {
@@ -12,7 +8,7 @@
     ../../modules/core-desktop.nix
     ../../modules/nix-os.nix
     ../../modules/users.nix
-    ../../modules/desktop/${desktop}.nix
+    ../../modules/desktop/${host.desktop}.nix
   ];
 
   boot = {
@@ -20,9 +16,9 @@
 
     initrd.kernelModules = ["amdgpu"];
 
-    kernelParams = with host; [
-      "video=${mainMonitor}:1920x1080@60"
-      "video=${secondMonitor}:1920x1080@60"
+    kernelParams = with host.monitors; [
+      "video=${main}:1920x1080@60"
+      "video=${second}:1920x1080@60"
     ];
 
     loader = {

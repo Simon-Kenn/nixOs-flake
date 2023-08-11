@@ -1,18 +1,18 @@
 {
-  hyprland,
   host,
+  inputs,
   ...
 }: {
   imports = [
-    hyprland.homeManagerModules.default
+    inputs.hyprland.homeManagerModules.default
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
 
     extraConfig = ''
-      monitor=${host.mainMonitor}, 1920x1080@60, 0x0, 1
-      monitor=${host.secondMonitor}, 1920x1080@60, 1920x0, 1
+      monitor=${host.monitors.main}, 1920x1080@60, 0x0, 1
+      monitor=${host.monitors.second}, 1920x1080@60, 1920x0, 1
        input {
         kb_layout=fr
         kb_variant=bepo
@@ -103,12 +103,12 @@
       # WIMDOWS RULES #
       # ------------- #
 
-      workspace = 1, monitor:${host.mainMonitor}, default:true
-      workspace = 2, monitor:${host.mainMonitor}, default:true
-      workspace = 3, monitor:${host.mainMonitor}, default:true
-      workspace = 4, monitor:${host.secondMonitor}, default:true
-      workspace = 5, monitor:${host.secondMonitor}, default:true
-      workspace = 6, monitor:${host.secondMonitor}, default:true
+      workspace = 1, monitor:${host.monitors.main}, default:true
+      workspace = 2, monitor:${host.monitors.main}, default:true
+      workspace = 3, monitor:${host.monitors.main}, default:true
+      workspace = 4, monitor:${host.monitors.second}, default:true
+      workspace = 5, monitor:${host.monitors.second}, default:true
+      workspace = 6, monitor:${host.monitors.second}, default:true
 
       # Floating
       # --------
