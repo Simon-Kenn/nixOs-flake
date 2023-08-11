@@ -12,7 +12,6 @@
     ../common/sound.nix
     ../common/shells/zsh.nix
     ../users/simon.nix
-    ../../modules/desktop/${host.desktop}.nix
   ];
 
   boot = {
