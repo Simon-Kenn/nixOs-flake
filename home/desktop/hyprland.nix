@@ -9,6 +9,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+
     extraConfig = ''
       monitor=${host.mainMonitor}, 1920x1080@60, 0x0, 1
       monitor=${host.secondMonitor}, 1920x1080@60, 1920x0, 1
@@ -26,7 +27,7 @@
         }
 
         sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
-      }
+        }
 
       general {
         gaps_in = 5
@@ -39,17 +40,18 @@
       }
 
       decoration {
-        rounding = 8
+        rounding = 5
         multisample_edges = 1
 
-        active_opacity = 1.0
-        inactive_opacity = 1.0
+        active_opacity = 0.94
+        inactive_opacity = 0.84
         fullscreen_opacity = 1.0
 
-        blur = 1
-        blur_size = 5
-        blur_passes = 1
-        blur_new_optimizations = on
+        blur {
+          enabled = 5
+          passes = 3
+          new_optimizations = true
+        }
 
         drop_shadow = yes
         shadow_range = 4
@@ -187,7 +189,7 @@
       bind = $mainMod SHIFT, parenleft, movetoworkspace, 7
       bind = $mainMod SHIFT, parenright, movetoworkspace, 8
       bind = $mainMod SHIFT, at, movetoworkspace, 9
-      bind = $mainMod SHIFT, plus, movetoworkspace, 10 
+      bind = $mainMod SHIFT, plus, movetoworkspace, 10
       bind = $mainMod SHIFT, minus, movetoworkspace, 4
       bind = $mainMod SHIFT, slash, movetoworkspace, 5
       bind = $mainMod SHIFT, asterisk, movetoworkspace, 6
