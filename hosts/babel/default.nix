@@ -16,11 +16,6 @@
 
     initrd.kernelModules = ["amdgpu"];
 
-    kernelParams = with host.monitors; [
-      "video=${main}:1920x1080@60"
-      "video=${second}:1920x1080@60"
-    ];
-
     loader = {
       efi = {
         efiSysMountPoint = "/boot/efi";
