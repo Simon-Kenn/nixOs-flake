@@ -10,8 +10,8 @@
     ../console.nix
     ../packages.nix
     ../sound.nix
+    ../users.nix
     ../../modules/core-desktop.nix
-    ../../modules/users.nix
     ../../modules/desktop/${host.desktop}.nix
   ];
 
