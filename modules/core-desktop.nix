@@ -1,8 +1,5 @@
 {pkgs, ...}: {
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "fr-bepo";
-  };
+  
 
   fonts.packages = with pkgs; [
     nerdfonts

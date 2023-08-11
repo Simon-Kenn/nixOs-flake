@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ../nix.nix
     ../locale.nix
+    ../console.nix
     ../../modules/core-desktop.nix
     ../../modules/users.nix
     ../../modules/desktop/${host.desktop}.nix
