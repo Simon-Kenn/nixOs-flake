@@ -8,6 +8,8 @@
     ../nix.nix
     ../locale.nix
     ../console.nix
+    ../packages.nix
+    ../sound.nix
     ../../modules/core-desktop.nix
     ../../modules/users.nix
     ../../modules/desktop/${host.desktop}.nix
@@ -35,7 +37,6 @@
   };
 
   hardware = {
-    pulseaudio.enable = true;
     opengl = {
       enable = true;
       extraPackages = with pkgs; [
