@@ -14,8 +14,6 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
-    initrd.kernelModules = ["amdgpu"];
-
     loader = {
       efi = {
         efiSysMountPoint = "/boot/efi";
