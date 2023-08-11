@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/core-desktop.nix
-    ../../modules/nix-os.nix
+    ../nix.nix
     ../../modules/users.nix
     ../../modules/desktop/${host.desktop}.nix
   ];
