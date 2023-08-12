@@ -2,6 +2,7 @@
   imports = [
     ./git.nix
     ./starship.nix
+    ./bat.nix
   ];
 
   home.packages = with pkgs; [
