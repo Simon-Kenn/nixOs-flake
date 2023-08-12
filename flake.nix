@@ -34,6 +34,8 @@
 
     lib = nixpkgs.lib;
   in {
+    homeManagerModules = import ./modules/home-manager;
+
     nixosConfigurations = {
       babel = lib.nixosSystem {
         specialArgs = {inherit inputs outputs host;};

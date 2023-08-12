@@ -1,17 +1,14 @@
 {
   pkgs,
   host,
-  inputs,
   ...
 }: {
   imports = [
     ./cli
     ./vim
     ./desktop/${host.desktop}/default.nix
-    inputs.nix-colors.homeManagerModule
   ];
 
-  colorscheme = inputs.nix-colors.colorSchemes.catppuccin-frappe;
 
   home = {
     username = "${host.user}";
