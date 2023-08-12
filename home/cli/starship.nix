@@ -7,7 +7,7 @@
 
     settings = {
       format = ''
-        $username$hostname($cmd_duration)
+        $username$hostname($shlvl)($cmd_duration)
         $jobs$character
       '';
 
@@ -22,13 +22,21 @@
       };
 
       hostname = {
-        format = "[@$hostname]($style)";
+        format = "[@$hostname]($style) ";
         ssh_only = false;
         style = "bold green";
       };
 
+      shlvl = {
+        format = "[$shlvl]($style) ";
+        style = "bold cyan";
+        threshold = 2;
+        repeat = true;
+        disabled = false;
+      };
+
       cmd_duration = {
-        format = " [$duration]($style)";
+        format = "in [$duration]($style)";
       };
 
       character = {
