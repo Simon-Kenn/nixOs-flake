@@ -7,8 +7,8 @@
 
     settings = {
       format = ''
-        $username$hostname($shlvl)($cmd_duration)
-        $jobs$character
+        $username$hostname($cmd_duration)
+        ($shlvl)$jobs$character
       '';
 
       fill = {
@@ -28,9 +28,9 @@
       };
 
       shlvl = {
-        format = "[$shlvl]($style) ";
+        format = " [$shlvl]($style) ";
         style = "bold cyan";
-        threshold = 2;
+        threshold = 3;
         repeat = true;
         disabled = false;
       };
