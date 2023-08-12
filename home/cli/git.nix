@@ -10,6 +10,7 @@
     userEmail = "simon.kenn.public@pm.me";
 
     extraConfig = {
+      init.defaultBranch = "main";
     };
 
     aliases = {
