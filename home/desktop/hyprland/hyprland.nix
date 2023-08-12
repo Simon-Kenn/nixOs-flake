@@ -34,7 +34,7 @@ in {
         gaps_in = 5
         gaps_out = 10
         border_size = 2
-        col.active_border = 0xFF${colors.base0C}
+        col.active_border = 0xFF${colors.base0D}
         col.inactive_border =  0xFF${colors.base02}
         col.group_border_active = 0xFF${colors.base0B}
         col.group_border = 0xFF${colors.base04}
