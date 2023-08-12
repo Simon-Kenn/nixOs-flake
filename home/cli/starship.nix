@@ -31,15 +31,17 @@
       };
 
       cmd_duration = {
-        format = "in [$duration]($style) ";
+        format = "took [$duration]($style) ";
+        style = "bold blue";
       };
 
       directory = {
-        format = "[$path]($style)( [$read_only]($read_only_style)) ";
+        format = "in [$path]($style)( [$read_only]($read_only_style)) ";
       };
 
       time = {
         format = "at [$time]($style)";
+        style = "bold blue";
         disabled = false;
       };
 
