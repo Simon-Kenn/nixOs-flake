@@ -5,12 +5,16 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
 
-    settings = {
-      format = ''
-        $username$hostname($cmd_duration)
-        $directory
-        ($shlvl)$jobs$character
-      '';
+    settings =  {
+      format = 
+        let
+          git = "$git_branch$git_commit$git_state$git_status";
+        in
+        ''
+          $username$hostname($cmd_duration)
+          $directory(${git})
+          ($shlvl)$jobs$character
+        '';
 
       fill = {
         symbol = " ";
