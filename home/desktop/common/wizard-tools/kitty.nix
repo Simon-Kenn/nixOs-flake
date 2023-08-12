@@ -4,7 +4,8 @@ in {
   programs.kitty = {
     enable = true;
     font = {
-      name = "FiraCode Nerd Font Mono";
+      name = config.fontProfiles.monospace.family;
+      size = 11;
     };
 
     shellIntegration.enableFishIntegration = true;

@@ -1,9 +1,9 @@
-{
+{config, ...}: {
   services.mako = {
     enable = true;
 
     anchor = "top-right";
-    font = "Liga SFMono Nerd Font 12";
+    font = "${config.fontProfiles.regular.family} 11";
     backgroundColor = "#24273A";
     textColor = "#CAD3F5";
     width = 400;
