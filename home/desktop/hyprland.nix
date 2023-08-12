@@ -1,8 +1,11 @@
 {
   host,
   inputs,
+  config,
   ...
-}: {
+}: let
+  inherit (config.colorscheme) colors;
+in {
   imports = [
     inputs.hyprland.homeManagerModules.default
   ];
@@ -33,8 +36,10 @@
         gaps_in = 5
         gaps_out = 10
         border_size = 2
-        col.active_border = 0xFF56B6C2
-        col.inactive_border =  0xFF343A40
+        col.active_border = 0xFF${colors.base0C}
+        col.inactive_border =  0xFF${colors.base02}
+        col.group_border_active = 0xFF${colors.base0B}
+        col.group_border = 0xFF${colors.base04}
 
         layout = dwindle
       }
