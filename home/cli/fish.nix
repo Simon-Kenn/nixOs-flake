@@ -2,21 +2,22 @@
   programs.fish = {
     enable = true;
 
-    shellAbbrs = {
+    shellAliases = {
+      nvim = "nix run ~/Projets/config/neovim --";
+      cat = "bat";
+      find = "fd";
+      grep = "ripgrep";
+      ls = "exa";
+
       vim = "nvim";
+    };
+
+    shellAbbrs = {
       vi = "nvim";
       v = "nvim";
 
-      cat = "bat";
-      fd = "find";
-      grep = "ripgrep";
-
-      ls = "exa";
-      ll = "exa -l";
-    };
-
-    shellAliases = {
-      nvim = "nix run ~/Projets/config/neovim --";
+      ll = "ls -l";
+      lla = "ls -la";
     };
   };
 }
