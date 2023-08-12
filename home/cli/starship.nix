@@ -8,6 +8,7 @@
     settings = {
       format = ''
         $username$hostname($cmd_duration)
+        $directory
         ($shlvl)$jobs$character
       '';
 
@@ -29,6 +30,10 @@
 
       cmd_duration = {
         format = "in [$duration]($style) ";
+      };
+
+      directory = {
+        format = "[$path]($style)( [$read_only]($read_only_style)) ";
       };
 
       shlvl = {
