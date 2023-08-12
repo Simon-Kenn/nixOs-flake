@@ -7,11 +7,7 @@
   imports = [
     ./cli
     ./vim
-    ./kitty.nix
-    ./desktop/${host.desktop}.nix
-    ./mako.nix
-    ./wofi.nix
-    ./waybar.nix
+    ./desktop/${host.desktop}/default.nix
     inputs.nix-colors.homeManagerModule
   ];
 
