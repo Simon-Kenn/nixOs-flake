@@ -5,16 +5,14 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
 
-    settings =  {
-      format = 
-        let
-          git = "$git_branch$git_commit$git_state$git_status";
-        in
-        ''
-          $username$hostname($cmd_duration)
-          $directory(${git})
-          ($shlvl)$jobs$character
-        '';
+    settings = {
+      format = let
+        git = "$git_branch$git_commit$git_state$git_status";
+      in ''
+        $username$hostname($cmd_duration)$time
+        $directory(${git})
+        ($shlvl)$jobs$character
+      '';
 
       fill = {
         symbol = " ";
@@ -38,6 +36,11 @@
 
       directory = {
         format = "[$path]($style)( [$read_only]($read_only_style)) ";
+      };
+
+      time = {
+        format = "at [$time]($style)";
+        disabled = false;
       };
 
       shlvl = {
