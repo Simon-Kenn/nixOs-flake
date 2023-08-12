@@ -6,7 +6,6 @@
   imports = [
     ./cli
     ./vim
-    ./${host.shell}.nix
     ./kitty.nix
     ./desktop/${host.desktop}.nix
     ./mako.nix

@@ -6,7 +6,7 @@
       name = "FiraCode Nerd Font Mono";
     };
 
-    shellIntegration.enableZshIntegration = true;
+    shellIntegration.enableFishIntegration = true;
 
     settings = {
       background_opacity = "0.95";

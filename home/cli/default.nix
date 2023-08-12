@@ -1,8 +1,9 @@
-{pkgs, ...}: {
+{pkgs, host, ...}: {
   imports = [
     ./git.nix
     ./starship.nix
     ./bat.nix
+    ./${host.shell}.nix
   ];
 
   home.packages = with pkgs; [
