@@ -8,11 +8,11 @@
       find = "fd";
       grep = "ripgrep";
       ls = "exa";
-
-      vim = "nvim";
     };
 
     shellAbbrs = {
+      g = "git";
+      vim = "nvim";
       vi = "nvim";
       v = "nvim";
 
