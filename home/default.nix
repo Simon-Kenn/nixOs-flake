@@ -1,14 +1,16 @@
 {
   pkgs,
   host,
+  outputs,
   ...
 }: {
-  imports = [
-    ./cli
-    ./vim
-    ./desktop/${host.desktop}/default.nix
-  ];
-
+  imports =
+    [
+      ./cli
+      ./vim
+      ./desktop/${host.desktop}/default.nix
+    ]
+    ++ (builtins.attrValues outputs.homeManagerModules);
 
   home = {
     username = "${host.user}";
