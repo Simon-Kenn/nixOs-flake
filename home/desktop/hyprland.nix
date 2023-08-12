@@ -19,9 +19,7 @@ in {
        input {
         kb_layout=fr
         kb_variant=bepo
-        kb_model=
-        kb_options=
-        kb_rules=
+        kb_options=caps:swapescape
 
         follow_mouse=1
 
