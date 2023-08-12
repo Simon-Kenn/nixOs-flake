@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{pkgs, outputs, ...}: {
+  imports = [
+    outputs.homeManagerModules.fonts
+  ];
   fontProfiles = {
     enable = true;
     monospace = {
