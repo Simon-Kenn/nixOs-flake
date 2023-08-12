@@ -8,6 +8,7 @@
     settings = {
       format = ''
         $username$hostname
+        $jobs$character
       '';
 
       fill = {
@@ -24,6 +25,12 @@
         format = "[@$hostname]($style)";
         ssh_only = false;
         style = "bold green";
+      };
+
+      character = {
+        success_symbol = "[➜](bold green) ";
+        error_symbol = "[✗](bold red) ";
+        vimcmd_symbol = "[V](bold green) ";
       };
     };
   };
