@@ -8,7 +8,6 @@
     ./vim
     ./${host.shell}.nix
     ./kitty.nix
-    ./starship.nix
     ./desktop/${host.desktop}.nix
     ./mako.nix
     ./wofi.nix
