@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../common
-    ../common/shells/zsh.nix
+    ../common/shells/${host.shell}.nix
     ../users/simon.nix
   ];
 

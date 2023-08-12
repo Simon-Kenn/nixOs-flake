@@ -24,6 +24,7 @@
       user = "simon";
       desktop = "hyprland";
       system = "x86_64-linux";
+      shell = "zsh";
       monitors = {
         main = "DP-1";
         second = "HDMI-A-1";

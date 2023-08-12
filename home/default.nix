@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./vim
-    ./zsh.nix
+    ./${host.shell}.nix
     ./kitty.nix
     ./starship.nix
     ./git.nix
