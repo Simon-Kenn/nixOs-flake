@@ -27,16 +27,16 @@
         style = "bold green";
       };
 
+      cmd_duration = {
+        format = "in [$duration]($style) ";
+      };
+
       shlvl = {
         format = " [$shlvl]($style) ";
         style = "bold cyan";
         threshold = 3;
         repeat = true;
         disabled = false;
-      };
-
-      cmd_duration = {
-        format = "in [$duration]($style)";
       };
 
       character = {
