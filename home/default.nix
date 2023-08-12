@@ -1,6 +1,7 @@
 {
   pkgs,
   host,
+  inputs,
   ...
 }: {
   imports = [
@@ -11,7 +12,10 @@
     ./mako.nix
     ./wofi.nix
     ./waybar.nix
+    inputs.nix-colors.homeManagerModule
   ];
+
+  colorscheme = inputs.nix-colors.colorSchemes.catppuccin-frappe;
 
   home = {
     username = "${host.user}";
