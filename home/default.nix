@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./cli
-    ./git.nix
     ./vim
     ./${host.shell}.nix
     ./kitty.nix
