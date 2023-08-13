@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, pkgs, ...}: {
   imports = [
     ./settings.nix
     ./workspaces.nix
@@ -7,6 +7,9 @@
     enable = true;
 
     settings = {
+      exec = [
+        "${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"
+      ];
       bind = let
         wofi = "${config.programs.wofi.package}/bin/wofi";
         terminal = config.home.sessionVariables.TERMINAL;

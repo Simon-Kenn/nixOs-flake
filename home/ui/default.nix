@@ -4,5 +4,6 @@
     ./colors.nix
     ./gtk.nix
     ./cursor.nix
+    ./wallpaper.nix
   ];
 }
