@@ -1,11 +1,14 @@
-{config, ...}: {
+{config, ...}: let
+  inherit (config.colorscheme) colors;
+in {
   services.mako = {
     enable = true;
 
     anchor = "top-right";
     font = "${config.fontProfiles.regular.family} 11";
-    backgroundColor = "#24273A";
-    textColor = "#CAD3F5";
+    backgroundColor = "#${colors.base00}dd";
+    borderColor = "#${colors.base0D}";
+    textColor = "#${colors.base05}dd";
     width = 400;
     height = 100;
     margin = "20";

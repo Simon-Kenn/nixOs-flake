@@ -1,4 +1,8 @@
-{pkgs, host, ...}: {
+{
+  pkgs,
+  host,
+  ...
+}: {
   imports = [
     ./git.nix
     ./starship.nix
@@ -13,5 +17,6 @@
     ripgrep
     fd
     diffsitter
+    notify-desktop
   ];
 }
