@@ -1,8 +1,7 @@
-{ config, ... }: let
+{config, ...}: let
   inherit (config.colorscheme) colors;
 in {
-  wayland.windowManager.hyprland = {
-    settings = {
+  wayland.windowManager.hyprland.settings = {
       input = {
         kb_layout = "fr";
         kb_variant = "bepo";
@@ -82,7 +81,5 @@ in {
           "border,1,3,easeout"
         ];
       };
-
     };
-  };
 }
