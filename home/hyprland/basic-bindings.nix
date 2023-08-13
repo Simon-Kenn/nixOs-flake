@@ -11,8 +11,8 @@ in {
     ];
     bind = [
       # window operations
-      "${secondMain},q,               killactive"
-      "${secondMain},c,               exit"
+      "${secondMain},c,               killactive"
+      "${secondMain},m,               exit"
       "${main}, v,                    togglefloating"
       "${main}, p,                    pseudo"
       "${main}, j,                    togglesplit"
