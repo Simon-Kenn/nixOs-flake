@@ -18,6 +18,6 @@
     ripgrep
     fd
     diffsitter
-    notify-desktop
+    libnotify
   ];
 }
