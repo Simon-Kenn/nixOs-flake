@@ -42,8 +42,8 @@ in {
       rounding = 5;
       multisample_edges = 1;
 
-      active_opacity = 0.94;
-      inactive_opacity = 1.0;
+      active_opacity = 0.85;
+      inactive_opacity = 0.75;
       fullscreen_opacity = 1.0;
 
       blur = true;
