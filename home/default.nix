@@ -21,6 +21,7 @@
       # Apps
       google-chrome
       logseq
+      obsidian
     ];
   };
 
