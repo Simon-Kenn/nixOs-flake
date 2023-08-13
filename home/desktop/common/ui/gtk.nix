@@ -22,7 +22,7 @@ in {
     };
     cursorTheme = {
       package = pkgs.catppuccin-cursors.frappeDark;
-      name = "catppuccin-cursors.frappeDark";
+      name = "Catppuccin-Frappe-Dark-Cursors";
     };
   };
 }
