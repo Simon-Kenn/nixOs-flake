@@ -7,6 +7,7 @@
     ./settings.nix
     ./workspaces.nix
     ./basic-bindings.nix
+    ./init-tty.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
