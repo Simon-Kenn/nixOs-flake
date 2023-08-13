@@ -45,6 +45,7 @@
       #  format = "{}";
       #  separate-outputs = true;
       #};
+      };
     };
     style = let
       inherit (config.colorscheme) colors;
