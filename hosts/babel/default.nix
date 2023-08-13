@@ -29,6 +29,11 @@
     dconf.enable = true;
   };
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
+
   networking = {
     hostName = "babel";
     networkmanager.enable = true;
