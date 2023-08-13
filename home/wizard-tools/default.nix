@@ -4,5 +4,6 @@
     ./mako.nix
     ./waybar
     ./wofi.nix
+    ./swaylock.nix
   ];
 }
