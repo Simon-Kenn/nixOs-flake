@@ -7,18 +7,9 @@
     enable = true;
 
     extraConfig = ''
-      # APP #
-      #-----#
-
       exec-once = waybar & logseq & kitty & firefox & mako
       exec=swaybg -m fill -i ~/.local/share/wallpapers/abstract_ghost.jpg
 
-
-      # -- Kitty --
-      windowrule=opacity 0.8,kitty
-      windowrule=float,kitty_float
-      windowrule=size 70% 70%,kitty_float
-      windowrule=center,kitty_float
 
       # BINDINGS
       # --------
