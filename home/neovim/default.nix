@@ -1,5 +1,0 @@
-{
-  nvim
-}: {
-  nvim.enable = true;
-}

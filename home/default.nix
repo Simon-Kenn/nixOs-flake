@@ -5,7 +5,8 @@
 }: {
   imports = [
     ./cli
-    ./vim
+    ./ui
+    ./wizard-tools
     ./desktop/${host.desktop}/default.nix
   ];
 

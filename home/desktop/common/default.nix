@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./ui 
-    ./wizard-tools 
-
-  ];
-}
