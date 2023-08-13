@@ -25,7 +25,7 @@
          }
 
          100% {
-            opacity: 1;
+            opacity: 0.85;
          }
       }
 
@@ -35,7 +35,7 @@
          }
 
          100% {
-            opacity: 1;
+            opacity: 0.85;
          }
       }
 
@@ -46,6 +46,7 @@
          border-radius: 7px;
          background-color: @bg;
          animation: slideIn 0.5s ease-in-out both;
+         opacity: 0.85;
       }
 
       #inner-box {
