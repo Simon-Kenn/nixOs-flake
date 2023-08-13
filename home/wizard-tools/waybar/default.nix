@@ -21,10 +21,10 @@
         height = 30;
         width = 1920;
         modules-left = [
-          "custom/logo"
+          "custom/nix"
           "wlr/workspaces"
         ];
-        "custom/logo" = custom-nix;
+        "custom/nix" = custom-nix;
         "wlr/workspaces" = workspaces;
       };
 
@@ -35,10 +35,10 @@
         height = 30;
         width = 1920;
         modules-left = [
-          "custom/logo"
+          "custom/nix"
           "wlr/workspaces"
         ];
-        "custom/logo" = custom-nix;
+        "custom/nix" = custom-nix;
         "wlr/workspaces" = workspaces;
       };
     };
@@ -55,28 +55,24 @@
         background: transparent;
       }
 
-      window#waybar.hidden {
-        opacity: 0.2;
+      #custom-nix, #workspaces {
+        background-color: #${colors.base00};
+        border-radius: 10px;
+        font-weight: bold;
       }
 
-      #custom-logo {
-        font-size: 1.50em;
-        padding-left: 1em;
-        padding-right: 1em;
+      #custom-nix {
         color: #${colors.base0D};
+        font-size: 1.5em;
       }
 
       #workspaces {
         opacity: 0.80;
-        background-color: #${colors.base00};
       }
 
       #workspaces button {
-        font-weight: bold;
         border: 0.1px solid #${colors.base03};
-        border-radius: 10px;
         color: #${colors.base05};
-        margin: 2px;
       }
 
       #workspaces button.focused,
