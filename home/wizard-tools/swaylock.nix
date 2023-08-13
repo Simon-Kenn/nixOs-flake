@@ -10,8 +10,14 @@ in {
     package = pkgs.swaylock-effects;
 
     settings = {
-      effect-blur = "20x3";
-      fade-in = 0.1;
+      effect-blur = "10x2";
+      fade-in = 0.2;
+
+      clock = true;
+      timestr = "%R";
+      datestr = "%a, %e of %B";
+
+      image = "${config.wallpaper}";
 
       font = config.fontProfiles.regular.family;
       font-size = 15;
@@ -19,7 +25,7 @@ in {
       line-uses-inside = true;
       disable-caps-lock-text = true;
       indicator-caps-lock = true;
-      indicator-radius = 40;
+      indicator-radius = 100;
       indicator-y-position = 1000;
 
       ring-color = "#${colors.base02}";
