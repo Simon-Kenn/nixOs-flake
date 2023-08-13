@@ -25,6 +25,10 @@
     };
   };
 
+  programs = {
+    dconf.enable = true;
+  };
+
   networking = {
     hostName = "babel";
     networkmanager.enable = true;
