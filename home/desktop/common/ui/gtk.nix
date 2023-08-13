@@ -14,14 +14,14 @@ in {
     };
     theme = {
       name = "${config.colorscheme.slug}";
-      packages = gtkThemeFromScheme {scheme = config.colorscheme;};
+      package = gtkThemeFromScheme {scheme = config.colorscheme;};
     };
     iconTheme = {
       name = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
-    cursor = {
-      packages = pkgs.catppuccin-cursors.frappeDark;
+    cursorTheme = {
+      package = pkgs.catppuccin-cursors.frappeDark;
       name = "catppuccin-cursors.frappeDark";
     };
   };
