@@ -1,91 +1,18 @@
-{
-  host,
-  config,
-  ...
-}: let
-  inherit (config.colorscheme) colors;
-in {
+{host, ...}: {
+  imports = [
+    ./settings.nix
+  ];
   wayland.windowManager.hyprland = {
     enable = true;
 
     settings = {
-      input = {
-        kb_layout = "fr";
-        kb_variant = "bepo";
-        kb_options = "caps:swapescape";
-
-        follow_mouse = 1;
-        sensitivity = 0;
-      };
-
-      general = {
-        gaps_in = 5;
-        gaps_out = 10;
-        border_size = 2;
-        col.active_border = "0xFF${colors.base0D}";
-        col.inactive_border = "0xFF${colors.base02}";
-        col.group_border_active = "0xFF${colors.base0B}";
-        col.group_border = "0xFF${colors.base04}";
-
-        layout = "dwindle";
-      };
-
+      monitor = [
+        "${host.monitors.main}, 1920x1080@60, 0x0, 1"
+        "${host.monitors.second}, 1920x1080@60, 1920x0, 1"
+      ];
     };
 
     extraConfig = ''
-      monitor=${host.monitors.main}, 1920x1080@60, 0x0, 1
-      monitor=${host.monitors.second}, 1920x1080@60, 1920x0, 1
-      decoration {
-        rounding = 5
-        multisample_edges = 1
-
-        active_opacity = 0.94
-        inactive_opacity = 0.84
-        fullscreen_opacity = 1.0
-
-        blur_enabled = 5
-        blur_passes = 3
-        blur_new_optimizations = true
-
-        drop_shadow = yes
-        shadow_range = 4
-        shadow_render_power = 3
-        col.shadow = rgba(1a1a1aee)
-      }
-
-      animations {
-        enabled = yes
-
-        bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-        bezier = overshot, 0.13, 0.99, 0.29, 1.1
-
-        animation = windows, 1, 5, default
-        animation = windowsOut, 1, 7, default, popin 80%
-        animation = border, 1, 10, default
-        animation = borderangle, 1, 8, default
-        animation = fade, 1, 8, default
-        animation = workspaces, 1, 3, overshot, slide
-      }
-
-      dwindle {
-        pseudotile = yes # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = yes # you probably want this
-      }
-
-      master {
-        # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-        new_is_master = true
-      }
-
-      gestures {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-          workspace_swipe = off
-      }
-
-      device:epic mouse V1 {
-          sensitivity = -0.5
-      }
-
       # APP #
       #-----#
 
