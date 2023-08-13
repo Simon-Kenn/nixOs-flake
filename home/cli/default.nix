@@ -19,5 +19,6 @@
     fd
     diffsitter
     libnotify
+    gnumake
   ];
 }
