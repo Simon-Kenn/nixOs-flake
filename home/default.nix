@@ -7,7 +7,7 @@
     ./cli
     ./ui
     ./wizard-tools
-    ./desktop/${host.desktop}/default.nix
+    ./hyprland
   ];
 
   home = {
