@@ -7,6 +7,7 @@
     ./cli
     ./ui
     ./wizard-tools
+    ./muggle-tools
     ./hyprland
   ];
 
@@ -18,7 +19,6 @@
 
     packages = with pkgs; [
       # Apps
-      firefox
       google-chrome
       logseq
     ];
