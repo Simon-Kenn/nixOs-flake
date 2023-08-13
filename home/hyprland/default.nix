@@ -1,47 +1,40 @@
 {
   host,
-  inputs,
   config,
   ...
 }: let
   inherit (config.colorscheme) colors;
 in {
-  imports = [
-    inputs.hyprland.homeManagerModules.default
-  ];
-
   wayland.windowManager.hyprland = {
     enable = true;
+
+    settings = {
+      input = {
+        kb_layout = "fr";
+        kb_variant = "bepo";
+        kb_options = "caps:swapescape";
+
+        follow_mouse = 1;
+        sensitivity = 0;
+      };
+
+      general = {
+        gaps_in = 5;
+        gaps_out = 10;
+        border_size = 2;
+        col.active_border = "0xFF${colors.base0D}";
+        col.inactive_border = "0xFF${colors.base02}";
+        col.group_border_active = "0xFF${colors.base0B}";
+        col.group_border = "0xFF${colors.base04}";
+
+        layout = "dwindle";
+      };
+
+    };
 
     extraConfig = ''
       monitor=${host.monitors.main}, 1920x1080@60, 0x0, 1
       monitor=${host.monitors.second}, 1920x1080@60, 1920x0, 1
-       input {
-        kb_layout=fr
-        kb_variant=bepo
-        kb_options=caps:swapescape
-
-        follow_mouse=1
-
-        touchpad {
-            natural_scroll = no
-        }
-
-        sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
-        }
-
-      general {
-        gaps_in = 5
-        gaps_out = 10
-        border_size = 2
-        col.active_border = 0xFF${colors.base0D}
-        col.inactive_border =  0xFF${colors.base02}
-        col.group_border_active = 0xFF${colors.base0B}
-        col.group_border = 0xFF${colors.base04}
-
-        layout = dwindle
-      }
-
       decoration {
         rounding = 5
         multisample_edges = 1
@@ -50,11 +43,9 @@ in {
         inactive_opacity = 0.84
         fullscreen_opacity = 1.0
 
-        blur {
-          enabled = 5
-          passes = 3
-          new_optimizations = true
-        }
+        blur_enabled = 5
+        blur_passes = 3
+        blur_new_optimizations = true
 
         drop_shadow = yes
         shadow_range = 4
