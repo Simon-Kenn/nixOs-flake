@@ -8,15 +8,13 @@
     ./workspaces.nix
     ./basic-bindings.nix
     ./init-tty.nix
+    ./startup-app.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
 
     settings = {
-      exec = [
-        "${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"
-      ];
       bind = let
         wofi = "${config.programs.wofi.package}/bin/wofi";
         terminal = config.home.sessionVariables.TERMINAL;
@@ -27,9 +25,8 @@
       ];
     };
     extraConfig = ''
-      exec-once = waybar & logseq & kitty & firefox & mako
-      exec=swaybg -m fill -i ~/.local/share/wallpapers/abstract_ghost.jpg
+            # exec-once = waybar & logseq & kitty & firefox & mako
+      #       exec=swaybg -m fill -i ~/.local/share/wallpapers/abstract_ghost.jpg
     '';
   };
-
 }
