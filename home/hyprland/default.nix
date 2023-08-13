@@ -9,6 +9,7 @@
     ./basic-bindings.nix
     ./init-tty.nix
   ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -29,5 +30,12 @@
       exec-once = waybar & logseq & kitty & firefox & mako
       exec=swaybg -m fill -i ~/.local/share/wallpapers/abstract_ghost.jpg
     '';
+  };
+
+  home.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    MOW_ENABLE_WAYLAND = 1;
   };
 }
