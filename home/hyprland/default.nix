@@ -1,16 +1,10 @@
-{host, ...}: {
+{
   imports = [
     ./settings.nix
+    ./workspaces.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
-
-    settings = {
-      monitor = [
-        "${host.monitors.main}, 1920x1080@60, 0x0, 1"
-        "${host.monitors.second}, 1920x1080@60, 1920x0, 1"
-      ];
-    };
 
     extraConfig = ''
       # APP #
@@ -19,37 +13,6 @@
       exec-once = waybar & logseq & kitty & firefox & mako
       exec=swaybg -m fill -i ~/.local/share/wallpapers/abstract_ghost.jpg
 
-      # Source a file (multi-file configs)
-
-      # WIMDOWS RULES #
-      # ------------- #
-
-      workspace = 1, monitor:${host.monitors.main}, default:true
-      workspace = 2, monitor:${host.monitors.main}, default:true
-      workspace = 3, monitor:${host.monitors.main}, default:true
-      workspace = 4, monitor:${host.monitors.second}, default:true
-      workspace = 5, monitor:${host.monitors.second}, default:true
-      workspace = 6, monitor:${host.monitors.second}, default:true
-
-      # Floating
-      # --------
-
-      windowrulev2 = float, class:Wofi
-      windowrulev2 = float, class:Rofi
-      windowrulev2 = float, class:notification
-      windowrulev2 = float, class:download
-      windowrulev2 = float, class:dialog
-      windowrulev2 = float, class:error
-
-
-      windowrulev2 = workspace 1, class:^(Kitty)$
-      windowrulev2 = workspace 3, class:^(Logseq)$
-
-      # Example windowrule v1
-      # windowrule = float, ^(kitty)$
-      # Example windowrule v2
-      # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
       # -- Kitty --
       windowrule=opacity 0.8,kitty
