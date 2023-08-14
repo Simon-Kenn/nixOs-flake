@@ -46,10 +46,12 @@ in {
       inactive_opacity = 0.75;
       fullscreen_opacity = 1.0;
 
-      blur = true;
-      blur_size = 5;
-      blur_passes = 3;
-      blur_new_optimizations = "on";
+      blur = {
+        enabled = true;
+        size = 5;
+        passes = 3;
+        new_optimizations = "on";
+      };
 
       drop_shadow = "yes";
       shadow_range = 4;
