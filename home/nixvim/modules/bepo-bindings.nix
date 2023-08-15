@@ -45,13 +45,13 @@
     normalVisualOp."gB" = ":exe \"silent! tabfirst\"<CR>";
     normalVisualOp."gÉ" = ":exe \"silent! tablast\"<CR>";
 
-    normalVisualOp."<C>s" = "<C-w>j";
-    normalVisualOp."<C>r" = "<C-w>k";
-    normalVisualOp."<C>t" = "<C-w>h";
-    normalVisualOp."<C>n" = "<C-w>l";
-    normalVisualOp."<C>d" = "<C-w>c";
-    normalVisualOp."<C>o" = "<C-w>s";
-    normalVisualOp."<C>p" = "<C-w>o";
+    normalVisualOp."<C-s>" = "<C-w>j";
+    normalVisualOp."<C-r>" = "<C-w>k";
+    normalVisualOp."<C-t>" = "<C-w>h";
+    normalVisualOp."<C-n>" = "<C-w>l";
+    normalVisualOp."<C-d>" = "<C-w>c";
+    normalVisualOp."<C-o>" = "<C-w>s";
+    normalVisualOp."<C-p>" = "<C-w>o";
 
     normalVisualOp."0" = "*";
     normalVisualOp."*" = "0";
