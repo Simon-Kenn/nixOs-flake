@@ -9,6 +9,7 @@
     ./wizard-tools
     ./muggle-tools
     ./hyprland
+    ./nvim
   ];
 
   home = {
