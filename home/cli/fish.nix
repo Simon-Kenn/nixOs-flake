@@ -3,8 +3,7 @@
     enable = true;
 
     shellAliases = {
-      nn = "nvim";
-      nvim = "nix run ~/Projets/config/neovim --";
+      vim = "nix run ~/Projets/config/neovim --";
       cat = "bat";
       find = "fd";
       grep = "ripgrep";
@@ -13,9 +12,9 @@
 
     shellAbbrs = {
       g = "git";
-      vim = "nvim";
-      vi = "nvim";
-      v = "nvim";
+      gcl = "git clone";
+      v = "vim";
+      neorg = "nvim";
 
       ll = "ls -l";
       lla = "ls -la";
