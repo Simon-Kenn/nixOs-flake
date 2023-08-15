@@ -53,31 +53,42 @@
 
       window#waybar {
         background: transparent;
-      }
-
-      #custom-nix, #workspaces {
-        background-color: #${colors.base00};
-        border-radius: 10px;
-        font-weight: bold;
-      }
-
-      #custom-nix {
-        color: #${colors.base0D};
-        font-size: 1.5em;
+        color: #${colors.base05};
       }
 
       #workspaces {
-        opacity: 0.80;
+        background: transparent;
+        font-weight: bold;
+        margin-left: 15px;
+      }
+
+      #custom-nix, #workspaces button {
+        background-color: #${colors.base00};
+        border-radius: 10px;
+        border: 0.1px solid #${colors.base03};
+        font-size: 20px;
+        /* margin-left: 10px; */
+        margin-top: 5px;
+        padding-top: 1px;
+        padding-left: 5px;
+        padding-right: 10px;
       }
 
       #workspaces button {
-        border: 0.1px solid #${colors.base03};
-        color: #${colors.base05};
+        opacity: 0.85;
+        margin-right: 2px;
+      }
+
+      #custom-nix {
+        margin-left: 8px;
+        color: #${colors.base0D};
       }
 
       #workspaces button.focused,
       #workspaces button.active {
+        opacity: 1;
         background-color: #${colors.base0D};
+        color: #${colors.base00};
       }
 
       #workspaces button.urgent {
