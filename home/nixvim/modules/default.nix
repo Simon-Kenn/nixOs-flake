@@ -8,5 +8,6 @@
     ./neorg.nix
     ./which-key.nix
     ./lsp.nix
+    ./nvim-cmp.nix
   ];
 }
