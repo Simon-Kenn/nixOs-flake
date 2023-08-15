@@ -3,6 +3,7 @@
     enable = true;
 
     shellAliases = {
+      nn = "nvim";
       nvim = "nix run ~/Projets/config/neovim --";
       cat = "bat";
       find = "fd";
