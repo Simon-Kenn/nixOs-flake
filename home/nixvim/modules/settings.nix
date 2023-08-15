@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     globals.mapleader = " ";
-    globals.localleader = ",";
+    globals.maplocalleader = ",";
 
     colorschemes.catppuccin = {
       enable = true;
