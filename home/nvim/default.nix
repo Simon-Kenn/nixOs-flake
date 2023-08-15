@@ -9,6 +9,7 @@
     enable = true;
 
     plugins = with pkgs.vimPlugins; [
+      catppuccin-nvim
       neorg
       neorg-telescope
       (nvim-treesitter.withPlugins (p:
@@ -17,7 +18,7 @@
         ]))
     ];
 
-    extraConfig = builtins.readFile(./vimrc);
+    extraConfig = builtins.readFile ./vimrc;
 
     extraLuaConfig = ''
       require("nvim-treesitter.configs").setup {
