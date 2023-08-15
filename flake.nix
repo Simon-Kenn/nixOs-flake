@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-colors.url = "github:misterio77/nix-colors";
-    neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+    nixvim.url = "github:nix-community/nixvim";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -32,9 +32,7 @@
     };
 
     lib = nixpkgs.lib;
-    neorg-overlay = neorg-overlay.overlays.default;
   in {
-    nixpkgs.overlays = [ neorg-overlay];
     homeManagerModules = import ./modules/home-manager;
 
     nixosConfigurations = {

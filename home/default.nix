@@ -9,7 +9,7 @@
     ./wizard-tools
     ./muggle-tools
     ./hyprland
-    ./nvim
+    ./nixvim
   ];
 
   home = {

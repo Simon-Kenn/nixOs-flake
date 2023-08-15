@@ -14,7 +14,7 @@ set visualbell
 set hidden " ne pas demander pour changer de buffer
 set relativenumber number
 set foldmethod=indent
-colorscheme catppuccin_frappe
+colorscheme catppuccin-frappe
 
 
 " Tabs is whitespace
@@ -100,15 +100,13 @@ noremap » >
 
 " Remaper la gestion des fenêtres
 " ———————————————————————————————
-noremap ws <C-w>j
-noremap wr <C-w>k
-noremap wt <C-w>h
-noremap wn <C-w>l
-noremap wd <C-w>c
-noremap wo <C-w>s
-noremap wp <C-w>o
-noremap w<SPACE> :split<CR>
-noremap w<CR> :vsplit<CR>
+noremap <C>s <C-w>j
+noremap <C>r <C-w>k
+noremap <C>t <C-w>h
+noremap <C>n <C-w>l
+noremap <C>d <C-w>c
+noremap <C>o <C-w>s
+noremap <C>p <C-w>o
 
 " Chiffres en accès direct
 " ————————————————————————
