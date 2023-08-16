@@ -20,22 +20,8 @@
       network = import ./modules/network.nix;
       custom-hostname = import ./modules/custom-hostname.nix;
     in {
-      leftBar = {
-        output = ["${host.monitors.left}"];
-        layer = "top";
-        position = "top";
-        height = 30;
-        width = 1920;
-        modules-left = [
-          "custom/nix"
-          "wlr/workspaces"
-        ];
-        "custom/nix" = custom-nix;
-        "wlr/workspaces" = workspaces;
-      };
-
       centerBar = {
-        output = ["${host.monitors.center}"];
+        output = ["${host.monitors.left}""${host.monitors.center}"];
         layer = "top";
         position = "top";
         height = 30;
