@@ -14,7 +14,10 @@
         };
       };
 
-      "core.concealer" = {};
+      "core.concealer" = {__empty = null;};
+			"core.ui.calendar" = {__empty = null;};
+			"core.summary" = {__empty = null;};
+
       "core.dirman" = {
         config = {
           workspaces = {
