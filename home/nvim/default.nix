@@ -6,9 +6,11 @@
     plugins = with pkgs.vimPlugins; [
       catppuccin-nvim
       neorg
+      plenary-nvim
+      telescope-nvim
+      telescope-fzf-native-nvim
       neorg-telescope
       nvim-treesitter.withAllGrammars
-      neorg-telescope
     ];
 
     extraConfig = builtins.readFile ./vimrc;
