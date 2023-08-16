@@ -13,7 +13,9 @@ set ruler
 set visualbell
 set hidden " ne pas demander pour changer de buffer
 set relativenumber number
-set foldmethod=indent
+set foldmethod=syntax
+set nofoldenable
+set foldlevel=99
 colorscheme catppuccin-frappe
 
 
