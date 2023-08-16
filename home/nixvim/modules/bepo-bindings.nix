@@ -7,6 +7,8 @@
     operator."aÉ" = "aW";
     operator."ié" = "iW";
     operator."iÉ" = "iW";
+    operator."dé" = "dw";
+    operator."dÉ" = "dW";
 
     normalVisualOp."t" = "h";
     normalVisualOp."n" = "l";
