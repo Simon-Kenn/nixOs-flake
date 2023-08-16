@@ -13,6 +13,12 @@
     settings = let
       custom-nix = import ./modules/custom-nix.nix;
       workspaces = import ./modules/worskpaces.nix;
+      clock = import ./modules/clock.nix;
+      cpu = import ./modules/cpu.nix;
+      memory = import ./modules/memory.nix;
+      pulseaudio = import ./modules/pulseaudio.nix;
+      network = import ./modules/network.nix;
+      custom-hostname = import ./modules/custom-hostname.nix;
     in {
       leftBar = {
         output = ["${host.monitors.left}"];
@@ -38,8 +44,25 @@
           "custom/nix"
           "wlr/workspaces"
         ];
+        modules-center = [
+          "cpu"
+          "memory"
+          "clock"
+          "pulseaudio"
+        ];
+        modules-right = [
+          "network"
+          "tray"
+          "custom/hostname"
+        ];
         "custom/nix" = custom-nix;
         "wlr/workspaces" = workspaces;
+        "clock" = clock;
+        "cpu" = cpu;
+        "memory" = memory;
+        "pulseaudio" = pulseaudio;
+        "network" = network;
+        "custom/hostname" = custom-hostname;
       };
     };
     style = let
@@ -49,6 +72,7 @@
         font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
         font-size: 11pt;
         border: none;
+        /* padding: 0 8px; */
       }
 
       window#waybar {
@@ -56,43 +80,78 @@
         color: #${colors.base05};
       }
 
+      .modules-right {
+        margin-right: 10px;
+        padding-left: 8px;
+      }
+
+      .modules-left {
+        margin-left: 10px;
+        padding-right: 8px;
+      }
+      .modules-left, .modules-center, .modules-right {
+        opacity: 0.85;
+        background-color: #${colors.base00};
+        border: 1px solid #${colors.base0C};
+        border-radius: 10px;
+      }
+
       #workspaces {
-        background: transparent;
         font-weight: bold;
         margin-left: 15px;
       }
 
-      #custom-nix, #workspaces button {
-        background-color: #${colors.base00};
-        border-radius: 10px;
-        border: 0.1px solid #${colors.base03};
-        font-size: 20px;
-        /* margin-left: 10px; */
-        margin-top: 5px;
-        padding-top: 1px;
-        padding-left: 5px;
-        padding-right: 10px;
-      }
-
       #workspaces button {
-        opacity: 0.85;
-        margin-right: 2px;
-      }
-
-      #custom-nix {
-        margin-left: 8px;
-        color: #${colors.base0D};
+        background-color: #${colors.base01};
+        color: #${colors.base05};
+        margin: 2px;
       }
 
       #workspaces button.focused,
       #workspaces button.active {
-        opacity: 1;
-        background-color: #${colors.base0D};
+        background-color: #${colors.base0C};
         color: #${colors.base00};
       }
 
       #workspaces button.urgent {
         background-color: #${colors.base08};
+      }
+
+      #custom-nix {
+        background-color: #${colors.base0C};
+        color: #${colors.base00};
+        padding-left: 15;
+        padding-right: 22px;
+        margin-left: 0;
+        margin-right: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 10px;
+      }
+      #custom-hostname {
+        background-color: #${colors.base0C};
+        color: #${colors.base00};
+        padding-left: 15px;
+        padding-right: 20;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 10px;
+      }
+
+      #tray {
+        color: #${colors.base05};
+      }
+
+      #clock {
+        background-color: #${colors.base0C};
+        color: #${colors.base00};
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius:10px;
       }
     '';
   };

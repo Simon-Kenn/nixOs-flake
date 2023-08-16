@@ -9,6 +9,7 @@
         "core.defaults" = {__empty = null;};
         "core.keybinds" = {
           config = {
+            hook = {};
           };
         };
 
