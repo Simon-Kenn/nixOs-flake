@@ -3,5 +3,6 @@
     ./core
     ./ui
     ./maps
+    ./telescope
   ];
 }
