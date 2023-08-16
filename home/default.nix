@@ -1,6 +1,7 @@
 {
   pkgs,
   host,
+  outputs,
   ...
 }: {
   imports = [
@@ -11,6 +12,10 @@
     ./hyprland
     ./nixvim
   ];
+nixpkgs = {
+      config = {allowUnfree = true;};
+      overlays = outputs.overlays;
+    };
 
   home = {
     username = "${host.user}";

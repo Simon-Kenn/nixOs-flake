@@ -4,8 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-colors.url = "github:misterio77/nix-colors";
+
     nixvim.url = "github:nix-community/nixvim";
-		neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+    neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -31,10 +33,15 @@
         center = "HDMI-A-1";
       };
     };
-		neorg-overlay = neorg-overlay.overlays.default;
+
+    overlays = [
+      inputs.neorg-overlay.overlays.default
+      inputs.neovim-nightly-overlay.overlay
+    ];
+
     lib = nixpkgs.lib;
   in {
-		nixpkgs.overlays = [ neorg-overlay ];
+    overlays = overlays;
     homeManagerModules = import ./modules/home-manager;
 
     nixosConfigurations = {
@@ -45,7 +52,7 @@
 
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
+            home-manager.useGlobalPkgs = false;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {inherit inputs outputs host;};
             home-manager.users.${host.user} = import ./home/default.nix;
