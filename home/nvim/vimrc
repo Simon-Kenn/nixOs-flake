@@ -38,6 +38,9 @@ onoremap aé aw
 onoremap aÉ aW
 onoremap ié iw
 onoremap iÉ iW
+onoremap dé dw
+onoremap dÉ dW
+
 " Pour faciliter les manipulations de fenêtres, on utilise {W} comme un Ctrl+W :
 noremap w <C-w>
 noremap W <C-w><C-w>
@@ -86,6 +89,7 @@ noremap gr gj
 " onglet précédent / suivant
 noremap gb gT
 noremap gé gt
+
 " optionnel : {gB} / {gÉ} pour aller au premier / dernier onglet
 noremap gB :exe "silent! tabfirst"<CR>
 noremap gÉ :exe "silent! tablast"<CR>

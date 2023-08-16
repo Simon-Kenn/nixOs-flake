@@ -10,12 +10,12 @@
     ./wizard-tools
     ./muggle-tools
     ./hyprland
-    ./nixvim
+    ./nvim
   ];
-nixpkgs = {
-      config = {allowUnfree = true;};
-      overlays = outputs.overlays;
-    };
+  nixpkgs = {
+    config = {allowUnfree = true;};
+    overlays = outputs.overlays;
+  };
 
   home = {
     username = "${host.user}";
