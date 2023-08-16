@@ -1,35 +1,6 @@
-" Police de caractère et icon
-" ---------------------------
-set enc=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf8,prc
-
-
-"  UI
-" ---
-syntax on
-" set number
-set ruler
-set visualbell
-set hidden " ne pas demander pour changer de buffer
-set relativenumber number
-set foldmethod=syntax
-set nofoldenable
-set foldlevel=99
-colorscheme catppuccin-frappe
-
-
-" Tabs is whitespace
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set smarttab
-set noshiftround
-set autoindent
-set smartindent
-
-" {W} -> [É]
+{
+  programs.neovim.extraConfig = ''
+        " {W} -> [É]
 " ——————————
 " On remappe W sur É :
 noremap é w
@@ -137,3 +108,5 @@ noremap / 9
 noremap 9 /
 noremap * 0
 noremap 0 *
+  '';
+}
