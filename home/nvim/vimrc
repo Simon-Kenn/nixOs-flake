@@ -104,13 +104,14 @@ noremap » >
 
 " Remaper la gestion des fenêtres
 " ———————————————————————————————
-noremap <C>s <C-w>j
-noremap <C>r <C-w>k
-noremap <C>t <C-w>h
-noremap <C>n <C-w>l
-noremap <C>d <C-w>c
-noremap <C>o <C-w>s
-noremap <C>p <C-w>o
+noremap <C-s> <C-w>j
+noremap <C-r> <C-w>k
+noremap <C-t> <C-w>h
+noremap <C-n> <C-w>l
+noremap <C-c> <C-w>c
+noremap <C-h> <C-w>s
+noremap <C-v> <C-w>v
+noremap <C-p> <C-w>o
 
 " Chiffres en accès direct
 " ————————————————————————
