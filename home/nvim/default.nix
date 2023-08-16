@@ -1,12 +1,7 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
-  imports = [];
-
+{pkgs, ...}: {
   programs.neovim = {
     enable = true;
+    package = pkgs.neovim-nightly;
 
     plugins = with pkgs.vimPlugins; [
       catppuccin-nvim
