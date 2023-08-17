@@ -10,7 +10,7 @@
     ./wizard-tools
     ./muggle-tools
     ./hyprland
-    ./nvim
+    ./nixvim
   ];
   nixpkgs = {
     config = {allowUnfree = true;};

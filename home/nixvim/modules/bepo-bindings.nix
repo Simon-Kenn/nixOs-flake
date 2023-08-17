@@ -51,9 +51,9 @@
     normalVisualOp."<C-r>" = "<C-w>k";
     normalVisualOp."<C-t>" = "<C-w>h";
     normalVisualOp."<C-n>" = "<C-w>l";
-    normalVisualOp."<C-d>" = "<C-w>c";
-    normalVisualOp."<C-o>" = "<C-w>s";
-    normalVisualOp."<C-p>" = "<C-w>o";
+    normalVisualOp."<C-c>" = "<C-w>c";
+    normalVisualOp."<C-h>" = "<C-w>s";
+    normalVisualOp."<C-v>" = "<C-w>v";
 
     normalVisualOp."0" = "*";
     normalVisualOp."*" = "0";

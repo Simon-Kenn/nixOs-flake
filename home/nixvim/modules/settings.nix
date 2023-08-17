@@ -18,7 +18,10 @@
       hidden = true;
       number = true;
       relativenumber = true;
-      foldmethod = "indent";
+
+      foldmethod = "syntax";
+      foldenable = false;
+      foldlevel = 99;
 
       tabstop = 2;
       shiftwidth = 2;
