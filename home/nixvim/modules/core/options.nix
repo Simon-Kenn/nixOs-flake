@@ -1,8 +1,5 @@
 {
   programs.nixvim = {
-    globals.mapleader = " ";
-    globals.maplocalleader = ",";
-
     colorschemes.catppuccin = {
       enable = true;
       flavour = "frappe";
@@ -19,7 +16,7 @@
       number = true;
       relativenumber = true;
 
-      foldmethod = "syntax";
+      foldmethod = "indent";
       foldenable = false;
       foldlevel = 99;
 
