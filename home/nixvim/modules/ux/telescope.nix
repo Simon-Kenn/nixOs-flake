@@ -26,7 +26,7 @@
             ["<Up>"] = "move_selection_previous",
 
             ["<CR>"] = "select_default",
-            ["<C-h>"] = "select_horizontal",
+            ["<C-g>"] = "select_horizontal",
             ["<C-v>"] = "select_vertical",
             ["<C-t>"] = "select_tab",
 
@@ -46,7 +46,7 @@
             ["<esc>"] = "close",
             ["<CR>"] = "select_default",
             ["<C-h>"] = "select_horizontal",
-            ["<C-v>"] = "select_vertical",
+            ["<C-g>"] = "select_vertical",
             ["<C-t>"] = "select_tab",
 
             ["j"] = "move_selection_next",

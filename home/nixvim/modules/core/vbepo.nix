@@ -53,7 +53,7 @@
     normalVisualOp."<C-n>" = "<C-w>l";
     normalVisualOp."<C-c>" = "<C-w>c";
     normalVisualOp."<C-h>" = "<C-w>s";
-    normalVisualOp."<C-v>" = "<C-w>v";
+    normalVisualOp."<C-g>" = "<C-w>v";
 
     normalVisualOp."0" = "*";
     normalVisualOp."*" = "0";
