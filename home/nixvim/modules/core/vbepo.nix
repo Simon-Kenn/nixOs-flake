@@ -1,77 +1,83 @@
 {
   programs.nixvim.maps = {
-    normalVisualOp."é" = "w";
-    normalVisualOp."É" = "W";
+		normalVisualOp = {
+			"é" = "w";
+			"É" = "W";
+		};
+    
+		operator = {
+			"aé" = "aW";
+    	"aÉ" = "aW";
+    	"ié" = "iW";
+    	"iÉ" = "iW";
+		};
 
-    operator."aé" = "aW";
-    operator."aÉ" = "aW";
-    operator."ié" = "iW";
-    operator."iÉ" = "iW";
+		normalVisualOp = {
+			"t" = "h";
+    	"n" = "l";
+    	"s" = "j";
+    	"r" = "k";
 
-    normalVisualOp."t" = "h";
-    normalVisualOp."n" = "l";
-    normalVisualOp."s" = "j";
-    normalVisualOp."r" = "k";
+    	"T" = "H";
+    	"N" = "L";
+    	"S" = "J";
+    	"R" = "K";
 
-    normalVisualOp."T" = "H";
-    normalVisualOp."N" = "L";
-    normalVisualOp."S" = "J";
-    normalVisualOp."R" = "K";
+    	"zr" = "zj";
+    	"zs" = "zk";
 
-    normalVisualOp."zr" = "zj";
-    normalVisualOp."zs" = "zk";
+    	"j" = "t";
+    	"J" = "T";
 
-    normalVisualOp."j" = "t";
-    normalVisualOp."J" = "T";
+    	"l" = "n";
+    	"L" = "N";
 
-    normalVisualOp."l" = "n";
-    normalVisualOp."L" = "N";
+    	"h" = "r";
+    	"H" = "R";
 
-    normalVisualOp."h" = "r";
-    normalVisualOp."H" = "R";
+    	"k" = "s";
+    	"K" = "S";
 
-    normalVisualOp."k" = "s";
-    normalVisualOp."K" = "S";
+    	"]k" = "]s";
+    	"[k" = "[s";
 
-    normalVisualOp."]k" = "]s";
-    normalVisualOp."[k" = "[s";
+    	"gs" = "gk";
+    	"gr" = "gj";
 
-    normalVisualOp."gs" = "gk";
-    normalVisualOp."gr" = "gj";
+    	"gb" = "gT";
+    	"gé" = "gt";
 
-    normalVisualOp."gb" = "gT";
-    normalVisualOp."gé" = "gt";
+    	"gB" = ":exe \"silent! tabfirst\"<CR>";
+    	"gÉ" = ":exe \"silent! tablast\"<CR>";
 
-    normalVisualOp."gB" = ":exe \"silent! tabfirst\"<CR>";
-    normalVisualOp."gÉ" = ":exe \"silent! tablast\"<CR>";
+    	"<C-s>" = "<C-w>j";
+    	"<C-r>" = "<C-w>k";
+    	"<C-t>" = "<C-w>h";
+    	"<C-n>" = "<C-w>l";
+    	"<C-c>" = "<C-w>c";
+    	"<C-h>" = "<C-w>s";
+    	"<C-g>" = "<C-w>v";
 
-    normalVisualOp."<C-s>" = "<C-w>j";
-    normalVisualOp."<C-r>" = "<C-w>k";
-    normalVisualOp."<C-t>" = "<C-w>h";
-    normalVisualOp."<C-n>" = "<C-w>l";
-    normalVisualOp."<C-c>" = "<C-w>c";
-    normalVisualOp."<C-h>" = "<C-w>s";
-    normalVisualOp."<C-g>" = "<C-w>v";
-
-    normalVisualOp."0" = "*";
-    normalVisualOp."*" = "0";
-    normalVisualOp."\"" = "1";
-    normalVisualOp."1" = "\"";
-    normalVisualOp."«" = "2";
-    normalVisualOp."2" = "«";
-    normalVisualOp."»" = "3";
-    normalVisualOp."3" = "»";
-    normalVisualOp."(" = "4";
-    normalVisualOp."4" = "(";
-    normalVisualOp.")" = "5";
-    normalVisualOp."5" = ")";
-    normalVisualOp."@" = "6";
-    normalVisualOp."6" = "@";
-    normalVisualOp."+" = "7";
-    normalVisualOp."7" = "+";
-    normalVisualOp."-" = "8";
-    normalVisualOp."8" = "-";
-    normalVisualOp."/" = "9";
-    normalVisualOp."9" = "/";
-  };
+    	"0" = "*";
+    	"*" = "0";
+    	"\"" = "1";
+    	"1" = "\"";
+    	"«" = "2";
+    	"2" = "«";
+    	"»" = "3";
+    	"3" = "»";
+    	"(" = "4";
+    	"4" = "(";
+    	")" = "5";
+    	"5" = ")";
+    	"@" = "6";
+    	"6" = "@";
+    	"+" = "7";
+    	"7" = "+";
+    	"-" = "8";
+    	"8" = "-";
+    	"/" = "9";
+    	"9" = "/";
+		};
+	};    
 }
