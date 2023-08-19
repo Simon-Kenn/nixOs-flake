@@ -9,6 +9,7 @@
       "<leader>fh" = "help_tags";
 
       "<leader>fs" = "treesitter";
+			"<leader>fd" = "diagnosics";
     };
   };
 

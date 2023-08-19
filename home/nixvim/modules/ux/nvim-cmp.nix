@@ -5,6 +5,7 @@
     sources = [
       {name = "buffer";}
       {name = "path";}
+			{name = "nvim-lsp";}
     ];
     mapping = {
       "<CR>" = "cmp.mapping.confirm({ select = true })";
