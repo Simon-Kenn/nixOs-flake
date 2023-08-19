@@ -2,5 +2,6 @@
   imports = [
     ./core
     ./ux
+		./lsp
   ];
 }
