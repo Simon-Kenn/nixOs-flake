@@ -1,7 +1,7 @@
 {
   imports = [
     ./core
+		./langages
     ./ux
-		./lsp
   ];
 }

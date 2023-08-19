@@ -17,28 +17,26 @@
 			};
 		};
 
-		servers.nixd = {
-			enable = true;
-			settings = {
-				eval = {
-					target = {
-						args = [];
-						installable = "";
+		servers = {
+			nixd = {
+				enable = true;
+				settings = {
+					eval = {
+						target = {
+							args = ["--expr" "with import <nixpkgs> { };"];	
+							installable = "";
+						};
 					};
-					depth = 0;
-					workers = 3;
-				};
-				formatting = {
-					command = "nixkpgs-fmt";
-				};
-				options = {
-					enable = true;
-					target = {
-						args = ["yes" "no" "maybe"];
-						installable = "";
+					options = {
+						enable = true;
+						target = {
+							args = [];
+							installable = "<flakeref>#nixosConfigurations.<name>.options";
+						};
 					};
 				};
 			};
+			html.enable = true;
 		};
 	};
 }

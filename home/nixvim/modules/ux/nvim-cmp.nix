@@ -3,9 +3,9 @@
     enable = true;
 
     sources = [
-      {name = "buffer";}
+			{name = "nvim_lsp";}
       {name = "path";}
-			{name = "nvim-lsp";}
+      {name = "buffer";}
     ];
     mapping = {
       "<CR>" = "cmp.mapping.confirm({ select = true })";
