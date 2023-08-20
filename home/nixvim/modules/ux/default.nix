@@ -8,5 +8,6 @@
 		./auto-session.nix
 		./harpoon.nix
 		./undotree.nix
+		./comment-nvim.nix
   ];
 }

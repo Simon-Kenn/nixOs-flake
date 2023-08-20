@@ -5,5 +5,6 @@
     ./ux
 		./ui
 		./neorg
+		./git 
   ];
 }
