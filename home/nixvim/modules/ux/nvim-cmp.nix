@@ -6,6 +6,7 @@
 			{name = "nvim_lsp";}
       {name = "path";}
       {name = "buffer";}
+			{name = "nvim-lua";}
     ];
     mapping = {
       "<CR>" = "cmp.mapping.confirm({ select = true })";

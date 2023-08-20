@@ -37,7 +37,16 @@
 				};
 			};
 			lua-ls.enable = true;
+			ccls.enable = true;
+
 			html.enable = true;
+			cssls.enable = true;
+			tsserver.enable = true;
+			eslint.enable = true;
+			jsonls.enable = true;
+
+			texlab.enable = true;
+			vuels.enable = true;
 		};
 	};
 	programs.nixvim.plugins.ledger = {
