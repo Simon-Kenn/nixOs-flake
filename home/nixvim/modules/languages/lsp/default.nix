@@ -18,22 +18,10 @@
 		};
 
 		servers = {
-			nixd = {
+			nil_ls = {
 				enable = true;
 				settings = {
-					eval = {
-						target = {
-							args = ["-f" "default.nix"];	
-							installable = "foo";
-						};
-					};
-					options = {
-						enable = true;
-						target = {
-							args = [];
-							installable = "/flakeref#nixosConfigurations.<babel>.options";
-						};
-					};
+					formatting.command = ["alejandra"];
 				};
 			};
 			lua-ls.enable = true;
@@ -49,9 +37,12 @@
 			vuels.enable = true;
 		};
 	};
+	programs.nixvim.plugins.lspkind = {
+		enable = true;
+	};
 	programs.nixvim.plugins.ledger = {
 		enable = true;
-
-			maxWidth = 80;
+		maxWidth = 80;
+		fillstring = "    -";
 	};
 }
