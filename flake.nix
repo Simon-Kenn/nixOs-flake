@@ -25,6 +25,7 @@
     host = {
       name = "babel";
       user = "simon";
+			path = "/home/simon";
       desktop = "hyprland";
       system = "x86_64-linux";
       shell = "fish";

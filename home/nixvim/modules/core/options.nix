@@ -1,4 +1,4 @@
-{
+{ host, ...}:{
   programs.nixvim.options = {
     enc = "utf-8";
 		fileencoding = "utf-8";
@@ -26,7 +26,7 @@
 
 		swapfile = false;
 		backup = false;
-		undodir = "os.getenv(\"HOME\") .. \"/.vim/undodir\"";
+		undodir = "${host.path}/.vim/undodir";
 		undofile = true;
 
 		hlsearch = false;
