@@ -3,7 +3,5 @@
 		enable = true;
 		
 		iconsEnabled = true;
-
-		theme = "base16";
 	};
 }
