@@ -37,12 +37,20 @@
 			vuels.enable = true;
 		};
 	};
+
 	programs.nixvim.plugins.lspkind = {
 		enable = true;
 	};
-	programs.nixvim.plugins.ledger = {
+
+	programs.nixvim.plugins.lsp-lines = {
 		enable = true;
-		maxWidth = 80;
-		fillstring = "    -";
+	};
+
+	programs.nixvim.plugins.lsp-format = {
+		enable = true;
+	};
+
+	programs.nixvim.plugins.nvim-lightbulb = {
+		enable = true;
 	};
 }

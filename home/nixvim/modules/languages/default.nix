@@ -1,6 +1,6 @@
 {
 	imports = [
 		./treesitter.nix
-		./lsp
+		./ledger.nix
 	];
 }

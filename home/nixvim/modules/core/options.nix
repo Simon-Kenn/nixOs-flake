@@ -9,6 +9,7 @@
    	ruler = true;
    	visualbell = true;
    	hidden = true;
+
    	number = true;
    	relativenumber = true;
 
@@ -22,5 +23,16 @@
    	smarttab = true;
    	autoindent = true;
    	smartindent = true;
+
+		swapfile = false;
+		backup = false;
+		undodir = "os.getenv(\"HOME\") .. \"/.vim/undodir\"";
+		undofile = true;
+
+		hlsearch = false;
+		incsearch = true;
+
+		scrolloff = 8;
+		colorcolumn = "80";
   };
 }
