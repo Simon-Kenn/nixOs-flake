@@ -3,5 +3,7 @@
     ./core
 		./langages
     ./ux
+		./ui
+		./neorg
   ];
 }
