@@ -1,9 +1,11 @@
 {pkgs, ...}: {
   programs.nixvim = {
+
     extraPlugins = with pkgs.vimPlugins; [
       neorg-telescope
     ];
-    plugins.neorg = {
+
+		plugins.neorg = {
       enable = true;
       modules = {
         "core.defaults" = {__empty = null;};
@@ -12,7 +14,6 @@
             hook = {};
           };
         };
-
         "core.completion" = {
           config = {
             engine = "nvim-cmp";
@@ -33,5 +34,41 @@
         };
       };
     };
+		extraConfigLua = ''
+			require('neorg').setup {
+				load = {
+					["core.esupports.metagen"] = {
+						config = {
+							type = "auto",
+							delimiter = ": ",
+							template = {
+								{
+									"titre",
+									function()
+										return vim.fn.expand("%:p:t:r")
+									end
+								},
+								{
+									"catégories",
+									""
+								},
+								{
+									"création",
+									function()
+										return os.date("%Y-%m-%d")
+									end
+								},
+								{
+									"modification",
+									function()
+										return os.date("%Y-%m-%d")
+									end
+								},
+							}
+						}
+					}
+				}
+			}
+		'';
   };
 }

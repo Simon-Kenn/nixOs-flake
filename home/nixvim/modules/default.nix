@@ -1,7 +1,7 @@
 {
   imports = [
     ./core
-		./langages
+		./languages
     ./ux
 		./ui
 		./neorg
