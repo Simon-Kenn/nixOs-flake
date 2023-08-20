@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+	imports = [
+		./core
+	];
   programs.nixvim = {
 
     extraPlugins = with pkgs.vimPlugins; [
@@ -20,6 +23,11 @@
           };
         };
 
+				"core.esupports.metagen" = {
+					config = {
+											};
+				};
+
         "core.concealer" = {__empty = null;};
         "core.ui.calendar" = {__empty = null;};
         "core.summary" = {__empty = null;};
@@ -34,41 +42,5 @@
         };
       };
     };
-		extraConfigLua = ''
-			require('neorg').setup {
-				load = {
-					["core.esupports.metagen"] = {
-						config = {
-							type = "auto",
-							delimiter = ": ",
-							template = {
-								{
-									"titre",
-									function()
-										return vim.fn.expand("%:p:t:r")
-									end
-								},
-								{
-									"catégories",
-									""
-								},
-								{
-									"création",
-									function()
-										return os.date("%Y-%m-%d")
-									end
-								},
-								{
-									"modification",
-									function()
-										return os.date("%Y-%m-%d")
-									end
-								},
-							}
-						}
-					}
-				}
-			}
-		'';
   };
 }
