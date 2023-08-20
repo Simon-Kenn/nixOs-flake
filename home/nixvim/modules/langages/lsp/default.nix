@@ -40,4 +40,9 @@
 			html.enable = true;
 		};
 	};
+	programs.nixvim.plugins.ledger = {
+		enable = true;
+
+			maxWidth = 80;
+	};
 }

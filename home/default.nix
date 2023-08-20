@@ -9,6 +9,7 @@
     ./ui
     ./wizard-tools
     ./muggle-tools
+		./productivity
     ./hyprland
     ./nixvim
   ];
