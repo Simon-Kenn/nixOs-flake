@@ -1,4 +1,4 @@
-{
+{	
 	programs.nixvim.plugins.lsp = {
 		enable = true;
 
@@ -23,19 +23,20 @@
 				settings = {
 					eval = {
 						target = {
-							args = ["--expr" "with import <nixpkgs> { };"];	
-							installable = "";
+							args = ["-f" "default.nix"];	
+							installable = "foo";
 						};
 					};
 					options = {
 						enable = true;
 						target = {
 							args = [];
-							installable = "<flakeref>#nixosConfigurations.<name>.options";
+							installable = "/flakeref#nixosConfigurations.<babel>.options";
 						};
 					};
 				};
 			};
+			lua-ls.enable = true;
 			html.enable = true;
 		};
 	};
