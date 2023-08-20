@@ -1,5 +1,5 @@
 {
-	programs.nixvim.plugins.neorg.modules."core.esuports.metagen".config = {
+	programs.nixvim.plugins.neorg.modules."core.esupports.metagen".config = {
 		type = "auto";
 			delimiter = ": ";
 			template = [
