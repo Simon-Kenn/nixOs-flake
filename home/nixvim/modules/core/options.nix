@@ -3,6 +3,8 @@
     enc = "utf-8";
 		fileencoding = "utf-8";
 
+		conceallevel = 3;
+
 		syntax = "on";
    	ruler = true;
    	visualbell = true;
