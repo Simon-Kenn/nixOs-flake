@@ -20,5 +20,6 @@
     diffsitter
     libnotify
     gnumake
+		feh
   ];
 }
