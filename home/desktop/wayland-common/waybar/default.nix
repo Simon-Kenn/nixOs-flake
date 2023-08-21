@@ -54,6 +54,7 @@
     style = let
       inherit (config.colorscheme) colors;
     in ''
+			@define-color accent #${colors.base0D};
       * {
         font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
         font-size: 11pt;
@@ -78,7 +79,7 @@
       .modules-left, .modules-center, .modules-right {
         opacity: 0.85;
         background-color: #${colors.base00};
-        border: 1px solid #${colors.base07};
+        border: 1px solid @accent;
         border-radius: 10px;
       }
 
@@ -95,7 +96,7 @@
 
       #workspaces button.focused,
       #workspaces button.active {
-        background-color: #${colors.base07};
+        background-color: @accent;
         color: #${colors.base00};
       }
 
@@ -104,7 +105,7 @@
       }
 
       #custom-nix {
-        background-color: #${colors.base07};
+        background-color: @accent;
         color: #${colors.base00};
         padding-left: 15;
         padding-right: 22px;
@@ -115,7 +116,7 @@
         border-radius: 10px;
       }
       #custom-hostname {
-        background-color: #${colors.base07};
+        background-color: @accent;
         color: #${colors.base00};
         padding-left: 15px;
         padding-right: 20;
@@ -131,7 +132,7 @@
       }
 
       #clock {
-        background-color: #${colors.base07};
+        background-color: @accent;
         color: #${colors.base00};
         padding-left: 15px;
         padding-right: 15px;
