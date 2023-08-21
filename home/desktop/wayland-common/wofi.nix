@@ -5,7 +5,7 @@
     settings = {
       image_siwe = 48;
       columns = 2;
-      allow_image = true;
+      allow_images = true;
       insensitive = true;
       run-always_parse_args = true;
       run-exec_search = true;
