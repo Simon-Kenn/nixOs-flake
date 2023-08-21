@@ -1,6 +1,7 @@
 {
   imports = [
     ./core
+		./keymaps 
 		./languages
 		./lsp
     ./ux

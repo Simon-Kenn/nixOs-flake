@@ -1,10 +1,5 @@
 {
   programs.nixvim.maps = {
-		normalVisualOp = {
-			"é" = "w";
-			"É" = "W";
-		};
-    
 		operator = {
 			"aé" = "aW";
     	"aÉ" = "aW";
@@ -13,6 +8,9 @@
 		};
 
 		normalVisualOp = {
+			"é" = "w";
+			"É" = "W";
+
 			"t" = "h";
     	"n" = "l";
     	"s" = "j";

@@ -12,11 +12,6 @@
       enable = true;
       modules = {
         "core.defaults" = {__empty = null;};
-        "core.keybinds" = {
-          config = {
-            hook = {};
-          };
-        };
         "core.completion" = {
           config = {
             engine = "nvim-cmp";
