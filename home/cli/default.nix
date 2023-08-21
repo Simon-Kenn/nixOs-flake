@@ -8,7 +8,6 @@
     ./starship.nix
     ./bat.nix
     ./${host.shell}.nix
-    ./vim
   ];
 
   home.packages = with pkgs; [
