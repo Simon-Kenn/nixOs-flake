@@ -1,7 +1,7 @@
- { pkgs, ...}:{
+ {
 	programs.nixvim.colorschemes.catppuccin = {
     enable = true;
-    flavour = "frappe";
+    flavour = "mocha";
 		integrations = {
 			cmp = true;
 			treesitter = true;

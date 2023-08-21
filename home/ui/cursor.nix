@@ -1,7 +1,7 @@
 {pkgs, ...}:{
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.catppuccin-cursors.frappeDark;
-    name = "Catppuccin-Frappe-Dark-Cursors";
+    package = pkgs.catppuccin-cursors.mochaDark;
+    name = "Catppuccin-Mocha-Dark-Cursors";
   };
 }

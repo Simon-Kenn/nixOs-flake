@@ -78,7 +78,7 @@
       .modules-left, .modules-center, .modules-right {
         opacity: 0.85;
         background-color: #${colors.base00};
-        border: 1px solid #${colors.base0C};
+        border: 1px solid #${colors.base07};
         border-radius: 10px;
       }
 
@@ -95,7 +95,7 @@
 
       #workspaces button.focused,
       #workspaces button.active {
-        background-color: #${colors.base0C};
+        background-color: #${colors.base07};
         color: #${colors.base00};
       }
 
@@ -104,7 +104,7 @@
       }
 
       #custom-nix {
-        background-color: #${colors.base0C};
+        background-color: #${colors.base07};
         color: #${colors.base00};
         padding-left: 15;
         padding-right: 22px;
@@ -115,7 +115,7 @@
         border-radius: 10px;
       }
       #custom-hostname {
-        background-color: #${colors.base0C};
+        background-color: #${colors.base07};
         color: #${colors.base00};
         padding-left: 15px;
         padding-right: 20;
@@ -131,7 +131,7 @@
       }
 
       #clock {
-        background-color: #${colors.base0C};
+        background-color: #${colors.base07};
         color: #${colors.base00};
         padding-left: 15px;
         padding-right: 15px;

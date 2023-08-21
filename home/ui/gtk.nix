@@ -21,8 +21,8 @@ in {
       package = pkgs.papirus-icon-theme;
     };
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.frappeDark;
-      name = "Catppuccin-Frappe-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
+      name = "Catppuccin-Mocha-Dark-Cursors";
     };
   };
 }

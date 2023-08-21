@@ -40,8 +40,8 @@ in {
       text-ver-color = "#${colors.base01}";
       text-wrong-color = "#${colors.base01}";
       text-caps-lock-color = "#${colors.base07}";
-      inside-clear-color = "#${colors.base0C}";
-      ring-clear-color = "#${colors.base0C}";
+      inside-clear-color = "#${colors.base07}";
+      ring-clear-color = "#${colors.base07}";
       inside-caps-lock-color = "#${colors.base09}";
       ring-caps-lock-color = "#${colors.base02}";
       separator-color = "#${colors.base02}";
