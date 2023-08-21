@@ -18,7 +18,10 @@ in {
     };
     iconTheme = {
       name = "Papirus";
-      package = pkgs.papirus-icon-theme;
+      package = pkgs.catppuccin-papirus-folders.override {
+				flavor = "mocha";
+				accent = "blue";
+			};
     };
     cursorTheme = {
       package = pkgs.catppuccin-cursors.mochaDark;
