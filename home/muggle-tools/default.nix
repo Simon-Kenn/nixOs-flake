@@ -1,7 +1,10 @@
-{
+{pkgs, ...}:{
   imports = [
     ./firefox.nix
     ./discord.nix
-		./thunar.nix
   ];
+
+	home.packages = with pkgs; [
+		xfce.thunar
+	];
 }
