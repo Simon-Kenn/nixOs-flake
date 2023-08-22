@@ -7,5 +7,8 @@
 
 	home.packages = with pkgs; [
 		xfce.thunar
+		libreoffice-qt
+		hunspell
+		hunspellDicts.fr-any
 	];
 }
