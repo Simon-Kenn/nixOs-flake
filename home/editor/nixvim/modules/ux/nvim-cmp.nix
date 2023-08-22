@@ -8,6 +8,7 @@
       {name = "buffer";}
 			{name = "nvim-lua";}
 			{name = "cmp-ledger";}
+			{name = "neorg";}
     ];
     mapping = {
       "<CR>" = "cmp.mapping.confirm({ select = true })";
