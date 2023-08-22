@@ -20,5 +20,7 @@
     libnotify
     gnumake
 		feh
+		neofetch
+		ranger
   ];
 }

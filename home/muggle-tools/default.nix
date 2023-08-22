@@ -12,5 +12,6 @@
 		hunspellDicts.fr-any
 		calibre
 		zotero
+		pavucontrol
 	];
 }

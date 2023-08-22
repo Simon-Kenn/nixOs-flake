@@ -1,8 +1,8 @@
 {
   interval = 3;
-  format-wifi = "   {essid}";
-  format-ethernet = "󰈁 Connected";
-  format-disconnected = "";
+  format-wifi = "  {essid}";
+  format-ethernet = "󰈁 Connecté";
+  format-disconnected = "󰈂 ";
   tooltip-format = ''
     {ifname}
     {ipaddr}/{cidr}

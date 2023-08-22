@@ -1,4 +1,4 @@
 {
-  format = "󰍛  {}%";
+  format = "  {}%";
   interval = 5;
 }

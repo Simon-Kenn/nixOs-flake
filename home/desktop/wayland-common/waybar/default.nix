@@ -31,14 +31,14 @@
           "wlr/workspaces"
         ];
         modules-center = [
-          "cpu"
+					"cpu"
           "memory"
           "clock"
           "pulseaudio"
-        ];
+				];
         modules-right = [
-          "network"
           "tray"
+          "network"
           "custom/hostname"
         ];
         "custom/nix" = custom-nix;
@@ -59,7 +59,6 @@
         font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
         font-size: 11pt;
         border: none;
-        /* padding: 0 8px; */
       }
 
       window#waybar {
@@ -67,20 +66,14 @@
         color: #${colors.base05};
       }
 
-      .modules-right {
-        margin-right: 10px;
-        padding-left: 8px;
-      }
-
-      .modules-left {
-        margin-left: 10px;
-        padding-right: 8px;
-      }
       .modules-left, .modules-center, .modules-right {
         opacity: 0.85;
         background-color: #${colors.base00};
         border: 1px solid @accent;
-        border-radius: 10px;
+				transition-property: background-color;
+				transition-duration: 0.5s;
+				border-radius: 10px;
+				margin: 5px 10px 5px 10px;
       }
 
       #workspaces {
@@ -104,27 +97,32 @@
         background-color: #${colors.base08};
       }
 
+			#custom-nix,
+			#cpu,
+			#memory,
+			#clock,
+			#pulseaudio,
+			#network,
+			#tray,
+			#custom-hostname {
+				padding: 0px 10px;
+				margin: 7px 0px 10px 0px;
+				border-radius: 8px;
+			}
+
       #custom-nix {
         background-color: @accent;
         color: #${colors.base00};
-        padding-left: 15;
-        padding-right: 22px;
-        margin-left: 0;
-        margin-right: 10px;
-        margin-top: 0;
-        margin-bottom: 0;
-        border-radius: 10px;
+				padding: 0px 20px 0px 15px;
+				margin: 0px 0px 0px 0px;
+				font-size: 25px;
       }
+
       #custom-hostname {
         background-color: @accent;
         color: #${colors.base00};
-        padding-left: 15px;
-        padding-right: 20;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        border-radius: 10px;
+				margin: 0px 0px;
+				padding: 0px 10px;
       }
 
       #tray {
