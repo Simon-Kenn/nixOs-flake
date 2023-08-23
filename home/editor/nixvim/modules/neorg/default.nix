@@ -12,16 +12,19 @@
       enable = true;
       modules = {
         "core.defaults" = {__empty = null;};
+				"core.journal" = {
+					config = {
+						journal_folder = "Journal";
+						strategy = "nested";
+						use_template = true;
+						workspace = "cerveauII";
+					};
+				};
         "core.completion" = {
           config = {
             engine = "nvim-cmp";
           };
         };
-
-				"core.esupports.metagen" = {
-					config = {
-											};
-				};
 
         "core.concealer" = {__empty = null;};
         "core.ui.calendar" = {__empty = null;};
@@ -30,11 +33,14 @@
         "core.dirman" = {
           config = {
             workspaces = {
-              notes = "~/Notes";
+              cerveauII = "~/CerveauII";
+							gtd = "~/CerveauII/GTD";
             };
-            default_workspace = "notes";
+						index = "Carte.norg";
+            default_workspace = "cerveauII";
           };
         };
+				"core.integrations.telescope" = {__empty = null;};
       };
     };
   };

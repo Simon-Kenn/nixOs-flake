@@ -11,8 +11,20 @@
 			presenter = "<cmd>Neorg keybind norg core.presenter";
 			traverse-heading = "<cmd>Neorg keybind norg core.integration.treesitter";
 			mode = "<cmd>Neorg mode";
+			telescope = "<cmd>Neorg keybind core.integrations.telescope";
 			in ''
 				function(keybinds)
+						-- telescope
+						keybinds.map("norg", "n", "<LocalLeader>fl", "${telescope}.find_linkable<CR>");
+						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.find_norg_files<CR>");
+
+						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.search_headings<CR>");
+						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.insert_file_link<CR>");
+
+						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.insert_link<CR>");
+
+						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.switch_workspace<CR>");
+
 						-- qol.todo_items
 						keybinds.map("norg",	"n", "<LocalLeader>tu", "${todo}undone<CR>")
 						keybinds.map("norg",	"n", "<LocalLeader>tp", "${todo}pending<CR>")
