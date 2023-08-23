@@ -9,5 +9,6 @@
 		./harpoon.nix
 		./undotree.nix
 		./comment-nvim.nix
+		./notify.nix
   ];
 }
