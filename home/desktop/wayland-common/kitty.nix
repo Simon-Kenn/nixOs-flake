@@ -15,6 +15,7 @@ in {
 
     settings = {
       background_opacity = "0.95";
+			window_padding_width = 4;
       scrollback_lines = 10000;
       enable_audio_bell = false;
       foreground = "#${colors.base05}";
