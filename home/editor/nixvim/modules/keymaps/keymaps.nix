@@ -34,6 +34,16 @@
 		"<leader>fd" = "diagnosics";
 
 		"<leader>fvcw" = "git_commits";
+		"<leader>fvcb" = "git_bcommits";
+		"<leader>fvb" = "git_branches";
+		"<leader>fvs" = "git_status";
+		"<leader>fvx" = "git_stash";
+
+		"<leader>flr" = "lsp_references";
+		"<leader>fli" = "lsp_implementations";
+		"<leader>flD" = "lsp_definitions";
+		"<leader>flt" = "lsp_type_definitions";
+		"<leader>fld" = "diagnostic";
 	};
 
 	programs.nixvim.plugins.lsp.keymaps = {

@@ -15,7 +15,23 @@
 				h = "À l'aide !",
 				s = "Treesitter",
 				v = {
-					git	
+					name = "Git",
+					c = {
+						name = "commits",
+						c = "commits",
+						b = "bcommits",
+					},
+					b = "branches",
+					s = "status",
+					x = "stash",
+				},
+				l = {
+					name = "lsp",
+					r = "Réferences",
+					i = "Implémentatinos",
+					D = "Définitions",
+					t = "Type Définitions",
+					d = "Diagnostic",
 				},
 			},
 			c = {
