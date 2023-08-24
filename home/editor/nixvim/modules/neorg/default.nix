@@ -27,7 +27,6 @@
 					config = {
 						journal_folder = "Journal";
 						strategy = "nested";
-						use_template = true;
 						workspace = "cerveauII";
 					};
 				};

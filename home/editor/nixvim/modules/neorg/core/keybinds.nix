@@ -11,14 +11,14 @@
 			presenter = "<cmd>Neorg keybind norg core.presenter";
 			traverse-heading = "<cmd>Neorg keybind norg core.integration.treesitter";
 			mode = "<cmd>Neorg mode";
-			telescope = "<cmd>Neorg keybind core.integrations.telescope";
+			telescope = "<cmd>Neorg keybind norg core.integrations.telescope";
 			in ''
 				function(keybinds)
 						-- telescope
-						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.search_headings<CR>");
-						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.insert_file_link<CR>");
+						keybinds.map("norg", "n", "<LocalLeader>sf", "${telescope}.search_headings<CR>");
 
-						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.insert_link<CR>");
+						keybinds.map("norg", "n", "<LocalLeader>if", "${telescope}.insert_file_link<CR>");
+						keybinds.map("norg", "n", "<LocalLeader>il", "${telescope}.insert_link<CR>");
 
 						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.switch_workspace<CR>");
 
