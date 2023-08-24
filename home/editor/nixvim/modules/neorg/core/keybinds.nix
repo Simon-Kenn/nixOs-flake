@@ -15,9 +15,6 @@
 			in ''
 				function(keybinds)
 						-- telescope
-						keybinds.map("norg", "n", "<LocalLeader>fl", "${telescope}.find_linkable<CR>");
-						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.find_norg_files<CR>");
-
 						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.search_headings<CR>");
 						keybinds.map("norg", "n", "<LocalLeader>fi", "${telescope}.insert_file_link<CR>");
 

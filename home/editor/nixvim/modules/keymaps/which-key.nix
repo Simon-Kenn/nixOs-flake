@@ -5,6 +5,28 @@
 
 	programs.nixvim.extraConfigLua = ''
 		local wk = require("which-key")
+		wk.register({
+			f = {
+				name = "Telescope",
+			},
+			t = {
+				name = "Toggle",
+				u = "undone"
+			},
+			n = {
+				name = "Nouvelle",
+			},
+			g = {
+				name = "Hop",
+			},
+			i = {
+				name = "Insérer"
+			},
+			m = {
+				name = "Mode"
+			},
+
+		}, { prefix = "<localleader>"})
 
 		wk.register({
 			f = {
