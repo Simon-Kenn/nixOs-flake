@@ -16,7 +16,9 @@
           config = {
             workspaces = {
               cerveauII = "~/CerveauII";
-							gtd = "~/CerveauII/GTD";
+							gtd = "~/CerveauII/Stratégies & Tactiques";
+							references = "~/CerveauII/Références";
+							notes = "~/CerveauII/Notes";
             };
 						index = "Carte.norg";
             default_workspace = "cerveauII";
