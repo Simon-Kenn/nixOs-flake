@@ -1,8 +1,9 @@
-{ pkgs, system, inputs, ... }:
+{ pkgs, inputs, host, ... }:
 {
   nix = {
     settings = {
       auto-optimise-store = true;
+			trusted-users = [ "${host.user}" ];
     };
     gc = {
       automatic = true;
