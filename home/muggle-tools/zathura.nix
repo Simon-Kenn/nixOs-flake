@@ -28,5 +28,29 @@ in {
       recolor-lightcolor = "#${colors.base00}";
       recolor-darkcolor = "#${colors.base06}";
 		};
+
+		mappings = {
+			t = "scroll left";
+			s = "scroll down";
+			r = "scroll up";
+			n = "scroll right";
+
+			S = "navigate next";
+			R = "navigate previous";
+
+			p = "rotate rotate-cw";
+			u = "reload";
+
+			b = "adjust_window best-fit";
+			a = "adjust_window width";
+
+			"[index] s" = "navigate_index down";
+			"[index] r" = "navigate_index up";
+			"[index] n" = "navigate_index expand";
+			"[index] t" = "navigate_index collapse";
+
+			"[index] T" = "navigate_index expand-all";
+			"[index] N" = "navigate_index collapse-all";
+		};
 	};
 }

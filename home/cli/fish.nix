@@ -21,6 +21,11 @@ in {
       ll = "ls -l";
       lla = "ls -la";
     };
+		functions = {
+			bepo = ''
+				
+				'';
+		};
 		interactiveShellInit = ''
 			set -U fish_color_normal cdd6f4
 			set -U fish_color_command 89b4fa
@@ -48,6 +53,19 @@ in {
 			set -U fish_pager_color_prefix f5c2e7
 			set -U fish_pager_color_completion cdd6f4
 			set -U fish_pager_color_description 6c7086
+		'' + 
+		''
+			#set -l rebind true
+			#bind --erase --all --preset
+			#fish_vi_key_bindings
+
+			#set -l init_mode insert # Le mode dans lequel on arrive
+
+			## Fin de ligne / Début de ligne
+			#set -l eol_keys \$ g\$ \u00E7 # $ g$ ç
+			#set -l bol_keys \^ 0 g\^ \u00E8 # ^ 0 g^ è
+
+			
 		'';
   };
 }
