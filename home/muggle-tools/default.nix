@@ -3,6 +3,7 @@
     ./firefox.nix
     ./discord.nix
 		./zathura.nix
+		./sioyek.nix
   ];
 
 	home.packages = with pkgs; [
