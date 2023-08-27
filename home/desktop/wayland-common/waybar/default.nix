@@ -54,7 +54,7 @@
     style = let
       inherit (config.colorscheme) colors;
     in ''
-			@define-color accent #${colors.base0D};
+			@define-color accent #${colors.base09};
       * {
         font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
         font-size: 11pt;

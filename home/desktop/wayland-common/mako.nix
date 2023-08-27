@@ -13,7 +13,7 @@ in {
     defaultTimeout = 12000;
     borderRadius = 5;
     backgroundColor = "#${colors.base00}dd";
-    borderColor = "#${colors.base0D}dd";
+    borderColor = "#${colors.base09}dd";
     textColor = "#${colors.base05}dd";
 
     extraConfig = ''
