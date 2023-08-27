@@ -10,6 +10,10 @@
 			"<Leader>cm" = "<cmd>Neorg index<CR>";
 			"<Leader>cf" = "<cmd>Neorg keybind all core.integrations.telescope.find_norg_files<CR>";
 			"<Leader>cl" = "<cmd>Neorg keybind all core.integrations.telescope.find_linkable<CR>";
+
+			"<Tab>" = "za";
+
+			"<Cr>" = "zz";
 		};
 	};
 
