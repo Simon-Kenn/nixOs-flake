@@ -7,11 +7,11 @@
     ./git.nix
     ./starship.nix
     ./bat.nix
+		./bottom.nix
     ./${host.shell}.nix
   ];
 
   home.packages = with pkgs; [
-    bottom
     ncdu
     exa
     ripgrep
