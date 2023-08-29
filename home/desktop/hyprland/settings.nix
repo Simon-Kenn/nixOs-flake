@@ -16,9 +16,9 @@ in {
       gaps_out = 5;
 
       border_size = 2;
-      "col.active_border" = "0xFF${colors.base09}";
+      "col.active_border" = "0xFF${colors.base0D}";
       "col.inactive_border" = "0xFF${colors.base02}";
-      "col.group_border_active" = "0xFF${colors.base09}";
+      "col.group_border_active" = "0xFF${colors.base0D}";
       "col.group_border" = "0xFF${colors.base04}";
 
       resize_on_border = true;

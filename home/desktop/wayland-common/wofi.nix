@@ -17,7 +17,7 @@
       @define-color txt #${config.colorscheme.colors.base05};
       @define-color bg #${config.colorscheme.colors.base00};
       @define-color bg1 #${config.colorscheme.colors.base03};
-      @define-color accent #${config.colorscheme.colors.base09};
+      @define-color accent #${config.colorscheme.colors.base0D};
 
       @keyframes slideIn {
          0% {

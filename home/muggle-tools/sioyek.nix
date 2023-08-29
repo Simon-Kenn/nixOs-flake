@@ -28,10 +28,10 @@ in {
 			"synctex_highlight_color" = "#${colors.base08}";
 
 			"highlight_color_a" = "#${colors.base07}"; 
-			"highlight_color_c" = "#${colors.base08}";
-			"highlight_color_d" = "#${colors.base09}";
-			"highlight_color_e" = "#${colors.base0B}";
-			"highlight_color_f" = "#${colors.base0E}";
+			"highlight_color_b" = "#${colors.base08}";
+			"highlight_color_c" = "#${colors.base09}";
+			"highlight_color_d" = "#${colors.base0B}";
+			"highlight_color_e" = "#${colors.base0E}";
 		};
 
 		bindings = {

@@ -2,5 +2,5 @@
   imports = [
     outputs.homeManagerModules.wallpaper
   ];
-  wallpaper = ../../../assets/wallpapers/dune/dune.jpg;
+  wallpaper = ../../../assets/wallpapers/landscapes/metheor.png;
 }
