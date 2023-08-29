@@ -69,7 +69,7 @@
       .modules-left, .modules-center, .modules-right {
         opacity: 0.85;
         background-color: #${colors.base00};
-        border: 1px solid @accent;
+        border: 1px solid #${colors.base02};
 				transition-property: background-color;
 				transition-duration: 0.5s;
 				border-radius: 10px;
