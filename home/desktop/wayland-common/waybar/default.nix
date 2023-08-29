@@ -67,7 +67,7 @@
       }
 
       .modules-left, .modules-center, .modules-right {
-        opacity: 0.85;
+        opacity: 0.70;
         background-color: #${colors.base00};
         border: 1px solid #${colors.base02};
 				transition-property: background-color;

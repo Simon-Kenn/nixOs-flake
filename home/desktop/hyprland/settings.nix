@@ -43,7 +43,7 @@ in {
       multisample_edges = 1;
 
       active_opacity = 0.85;
-      inactive_opacity = 0.75;
+      inactive_opacity = 0.70;
       fullscreen_opacity = 1.0;
 
       blur = {
