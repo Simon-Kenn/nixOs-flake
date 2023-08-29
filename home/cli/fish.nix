@@ -22,9 +22,7 @@ in {
       lla = "ls -la";
     };
 		functions = {
-			bepo = ''
-				
-				'';
+			fish_greeting = "";
 		};
 		interactiveShellInit = ''
 			set -U fish_color_normal cdd6f4
