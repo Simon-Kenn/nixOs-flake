@@ -5,5 +5,6 @@
     ./waybar
     ./wofi.nix
     ./swaylock.nix
+		./qutebrowser.nix
   ];
 }

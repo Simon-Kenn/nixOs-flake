@@ -11,10 +11,10 @@
 			"é" = "w";
 			"É" = "W";
 
-			"t" = "h";
-    	"n" = "l";
-    	"s" = "j";
-    	"r" = "k";
+			"t" = "h"; # cursor right
+    	"n" = "l"; # cursor left
+    	"s" = "j"; # cursor dowm
+    	"r" = "k"; # cursor up
 
     	"T" = "H";
     	"N" = "L";
