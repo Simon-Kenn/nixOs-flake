@@ -13,7 +13,8 @@
    	number = true;
    	relativenumber = true;
 
-   	foldmethod = "indent";
+   	foldmethod = "expr";
+		foldexpr = "nvim_treesitter#foldexpr()";
    	foldenable = false;
    	foldlevel = 99;
 
