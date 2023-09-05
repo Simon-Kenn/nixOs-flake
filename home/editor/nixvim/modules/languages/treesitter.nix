@@ -6,7 +6,7 @@
     ensureInstalled = "all";
   };
 
-	programs.nixvim.plugins.treesitter-rainbow = {
+	programs.nixvim.plugins.rainbow-delimiters = {
 		enable = true;
 	};
 
