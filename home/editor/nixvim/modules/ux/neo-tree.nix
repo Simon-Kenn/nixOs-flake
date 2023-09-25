@@ -1,12 +1,15 @@
 {
-	programs.nixvim.neo-tree = {
+	programs.nixvim.plugins.neo-tree = {
 		enable = true;
 		
-		mappings = {
+		
+		window.mappings = {
 			"<space>" = {
 				command = "toggle_node";
 				nowait = false;
 			};
+			r =  "navigate_up";
+			s =  "navigate_down";
 		};
 	};
 }

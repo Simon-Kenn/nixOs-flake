@@ -13,7 +13,7 @@
 
   home.packages = with pkgs; [
     ncdu
-    exa
+    eza
     ripgrep
     fd
     diffsitter

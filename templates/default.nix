@@ -1,0 +1,3 @@
+{
+	node.path = ./node;
+}

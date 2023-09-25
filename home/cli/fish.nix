@@ -9,7 +9,7 @@ in {
       cat = "bat";
       find = "fd";
       grep = "ripgrep";
-      ls = "exa --icons";
+      ls = "eza --icons";
     };
 
     shellAbbrs = {
