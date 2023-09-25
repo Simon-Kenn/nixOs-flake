@@ -28,7 +28,7 @@
         width = 1920;
         modules-left = [
           "custom/nix"
-          "wlr/workspaces"
+          "hyprland/workspaces"
         ];
         modules-center = [
 					"cpu"
@@ -42,7 +42,7 @@
           "custom/hostname"
         ];
         "custom/nix" = custom-nix;
-        "wlr/workspaces" = workspaces;
+        "hyprland/workspaces" = workspaces;
         "clock" = clock;
         "cpu" = cpu;
         "memory" = memory;
