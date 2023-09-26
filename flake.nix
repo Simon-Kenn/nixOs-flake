@@ -56,8 +56,8 @@
       system = "x86_64-linux";
       shell = "fish";
       monitors = {
-        left = "DP-1";
-        center = "HDMI-A-1";
+        main = "DP-1";
+        second = "HDMI-A-1";
       };
     };
 

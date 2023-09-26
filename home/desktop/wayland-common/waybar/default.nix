@@ -21,7 +21,7 @@
       custom-hostname = import ./modules/custom-hostname.nix;
     in {
       centerBar = {
-        output = ["${host.monitors.left}""${host.monitors.center}"];
+        output = ["${host.monitors.main}""${host.monitors.second}"];
         layer = "top";
         position = "top";
         height = 30;
