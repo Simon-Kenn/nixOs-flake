@@ -9,13 +9,14 @@
     ];
     exec-once = [
       "waybar & mako"
-			"[workspace 1 silent] kitty --hold sh -c btm"
-			"[workspace 2 silent] firefox"
-			"[workspace 4 silent] discord"
+			"[workspace 1 silent] kitty ~/Journal --hold sh -c nvim"
+			"[workspace 2 silent] kitty ~/Notes --hold sh -c nvim"
+			"[workspace 3 silent] kitty ~/Org"
+			"[workspace 4 silent] kitty ~/Code"
 
-			"[workspace 7 silent] kitty"
-			"[workspace 8 silent] kitty ~/Code"
-			"[workspace 9 silent] kitty ~/CerveauII --hold sh -c nvim"
+			"[workspace 6 silent] kitty --hold sh -c btm"
+			"[workspace 7 silent] firefox"
+			"[workspace 8 silent] discord"
     ];
   };
 }
