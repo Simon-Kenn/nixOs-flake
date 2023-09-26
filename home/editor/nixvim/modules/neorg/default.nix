@@ -18,13 +18,12 @@
 				"core.dirman" = {
           config = {
             workspaces = {
-              cerveauII = "~/CerveauII";
-							gtd = "~/CerveauII/Stratégies & Tactiques";
-							references = "~/CerveauII/Références";
-							notes = "~/CerveauII/Notes";
+							notes = "~/Notes";
+							home = "~";
+							org = "~/Org";
             };
-					index = "Carte.norg";
-            default_workspace = "cerveauII";
+					index = "index.norg";
+            default_workspace = "notes";
           };
         };
 
@@ -32,7 +31,7 @@
 					config = {
 						journal_folder = "Journal";
 						strategy = "nested";
-						workspace = "cerveauII";
+						workspace = "home";
 					};
 				};
 				"core.completion" = {
@@ -43,7 +42,7 @@
         };
 
         "core.concealer" = {__empty = null;};
-        "core.ui.calendar" = {__empty = null;};
+        #"core.ui.calendar" = {__empty = null;};
         "core.summary" = {__empty = null;};
 
         "core.integrations.telescope" = {__empty = null;};
