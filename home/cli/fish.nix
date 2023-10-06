@@ -5,7 +5,6 @@ in {
     enable = true;
 
     shellAliases = {
-      vim = "nix run ~/Projets/config/neovim --";
       cat = "bat";
       find = "fd";
       grep = "ripgrep";
