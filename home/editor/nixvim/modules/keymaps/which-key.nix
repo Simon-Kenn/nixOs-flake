@@ -56,7 +56,7 @@
 					d = "Diagnostic",
 				},
 			},
-			c = {
+			n = {
 				name = "Cerveau II",
 				f = "Chercher une note",
 				l = "Chercher un bloc",

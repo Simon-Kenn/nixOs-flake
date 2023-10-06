@@ -4,12 +4,12 @@
 		
 		
 		window.mappings = {
-			"<space>" = {
-				command = "toggle_node";
-				nowait = false;
-			};
-			r =  "navigate_up";
-			s =  "navigate_down";
+			#"<space>" = {
+			#	command = "toggle_node";
+			#	nowait = false;
+			#};
+			#r =  "navigate_up";
+			#s =  "navigate_down";
 		};
 	};
 }

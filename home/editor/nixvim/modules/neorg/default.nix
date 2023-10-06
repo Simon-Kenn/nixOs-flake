@@ -42,7 +42,7 @@
         };
 
         "core.concealer" = {__empty = null;};
-        "core.ui.calendar" = {__empty = null;};
+#        "core.ui.calendar" = {__empty = null;};
         "core.summary" = {__empty = null;};
 
         "core.integrations.telescope" = {__empty = null;};

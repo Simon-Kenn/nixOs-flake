@@ -1,7 +1,7 @@
 {
 	imports = [
 		./vbepo.nix
-		./keymaps.nix
+    ./keymaps.nix
 		./which-key.nix
 	];
 }
