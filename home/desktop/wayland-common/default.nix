@@ -1,6 +1,7 @@
 {
   imports = [
     ./kitty.nix
+		./zellij.nix
     ./mako.nix
     ./waybar
     ./wofi.nix
