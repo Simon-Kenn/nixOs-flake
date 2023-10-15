@@ -27,114 +27,114 @@
 					desc = "Tampon suivant"; 
 				}; 
 			}
-			{ key = ""; action = "<cmd>BufferMovePrevious<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Décaler le buffer vers la droite"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferMoveNext<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Décaler le buffer vers la gauche"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 1<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au premier buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 2<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au deuxième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 3<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au troixième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 4<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au quatrième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 5<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au cinquième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 6<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au sixième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 7<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au septième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 8<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au huitième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferGoto 9<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au neuvième buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferLast<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Aller au dernier buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferPin<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Épingler / désepingler le buffer"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferClose<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Fermer le buffer en cours"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferOrderByBufferNumber<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Réordonner les buffer par numéro"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferOrderByDirectory<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Réordonner les buffers par répertoire"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferOrderByLanguage<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Réordonner les buffers par langages"; 
-				}; 
-			}
-			{ key = ""; action = "<cmd>BufferOrderByWindowNumber<CR>"; 
-				options = { 
-					silent = true; 
-					desc = "Réordonner les buffers par fenêtre"; 
-				}; 
-			}
+			#{ key = ""; action = "<cmd>BufferMovePrevious<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Décaler le buffer vers la droite"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferMoveNext<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Décaler le buffer vers la gauche"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 1<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au premier buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 2<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au deuxième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 3<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au troixième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 4<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au quatrième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 5<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au cinquième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 6<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au sixième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 7<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au septième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 8<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au huitième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferGoto 9<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au neuvième buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferLast<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Aller au dernier buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferPin<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Épingler / désepingler le buffer"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferClose<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Fermer le buffer en cours"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferOrderByBufferNumber<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Réordonner les buffer par numéro"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferOrderByDirectory<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Réordonner les buffers par répertoire"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferOrderByLanguage<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Réordonner les buffers par langages"; 
+			#	}; 
+			#}
+			#{ key = ""; action = "<cmd>BufferOrderByWindowNumber<CR>"; 
+			#	options = { 
+			#		silent = true; 
+			#		desc = "Réordonner les buffers par fenêtre"; 
+			#	}; 
+			#}
     	# Neorg
     	{ key = "<Leader>nja"; action = "<cmd>Neorg journal today<CR>"; }
 			{ key = "<Leader>njm"; action = "<cmd>Neorg journal toc<CR>"; }
@@ -159,8 +159,14 @@
 			# Neotree
 			{
 				key = "<leader>j";
-				action = "<cmd>Neotree toggle reveal_force_cwd<cr>";
+				action = "<cmd>Neotree toggle reveal_force_cwd<CR>";
 			}
+			# Which key
+			{
+				key = "<leader>w";
+				action = "<cmd>WhichKey<CR>";
+			}
+
 		];
 
 		plugins = { 
