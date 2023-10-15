@@ -5,7 +5,7 @@
 		./autopairs.nix
 		./auto-save.nix
 		./auto-session.nix
-		./harpoon.nix
+		#./harpoon.nix
 		./undotree.nix
 		./comment-nvim.nix
 		./notify.nix

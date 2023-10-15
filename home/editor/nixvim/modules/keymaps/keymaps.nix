@@ -181,51 +181,51 @@
 				};
 			};
 
-		telescope.keymaps = {
-			"<leader>ff" = { 
-				action = "find_files";
-				desc = "Telescope Find Files";
+			telescope.keymaps = {
+				"<leader>ff" = { 
+					action = "find_files";
+					desc = "Telescope Find Files";
+				};
+				"<leader>fg" = {
+					action = "live_grep";
+					desc = "Telescope Live Grep";
+				};
+				"<leader>fb" = {
+					action = "buffers";	
+					desc = "Telescope Find Buffers";
+				};
+				"<leader>fh" = "help_tags";
+
+				#"<leader>fs" = "treesitter";
+				#"<leader>fd" = "diagnosics";
+
+				"<leader>fvcw" = "git_commits";
+	 			"<leader>fvcb" = "git_bcommits";
+	 			"<leader>fvb" = "git_branches";
+	 			"<leader>fvs" = "git_status";
+	 			"<leader>fvx" = "git_stash";
+
+				#"<leader>flr" = "lsp_references";
+	 			#"<leader>fli" = "lsp_implementations";
+	 			#"<leader>flD" = "lsp_definitions";
+	 			#"<leader>flt" = "lsp_type_definitions";
+	 			#"<leader>fld" = "diagnostic";
 			};
-			"<leader>fg" = {
-				action = "live_grep";
-				desc = "Telescope Live Grep";
-			};
-			"<leader>fb" = {
-				action = "buffers";	
-				desc = "Telescope Find Buffers";
-			};
-			"<leader>fh" = "help_tags";
 
-			#"<leader>fs" = "treesitter";
-			#"<leader>fd" = "diagnosics";
-
-			"<leader>fvcw" = "git_commits";
-	 		"<leader>fvcb" = "git_bcommits";
-	 		"<leader>fvb" = "git_branches";
-	 		"<leader>fvs" = "git_status";
-	 		"<leader>fvx" = "git_stash";
-
-			#"<leader>flr" = "lsp_references";
-	 		#"<leader>fli" = "lsp_implementations";
-	 		#"<leader>flD" = "lsp_definitions";
-	 		#"<leader>flt" = "lsp_type_definitions";
-	 		#"<leader>fld" = "diagnostic";
-		};
-
-	 lsp.keymaps = {
-	 	diagnostic = {
-	 			"<leader>lr" = "goto_prev";
-	 			"<leader>ls" = "goto_next";
-	 			"<leader>vd" = "open_float";
-	 		};
-	 		lspBuf = {
-	 			"gd" = "definition";
-	 			"gD" = "references";
-	 			"gt" = "type_definition";
-	 			"gi" = "implementation";
-	 			"K" = "hover";
-	 		};
-	 	};
+			lsp.keymaps = {
+	 			diagnostic = {
+	 					"<leader>lr" = "goto_prev";
+	 					"<leader>ls" = "goto_next";
+	 					"<leader>vd" = "open_float";
+	 				};
+	 				lspBuf = {
+	 					"gd" = "definition";
+	 					"gD" = "references";
+	 					"gt" = "type_definition";
+	 					"gi" = "implementation";
+	 					"K" = "hover";
+	 				};
+	 			};
 		};
 	};
 }
