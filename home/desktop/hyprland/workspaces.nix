@@ -25,9 +25,9 @@
       "float, class:dialog"
       "float, class:error"
 
-      "workspace 1, class:(Kitty),title:(kitty)"
+      "workspace 1, class:(Alacritty),title:(alacritty)"
       "workspace 2, class:(Firefox),title:(firefox)"
-      "workspace 8, class:(Kitty),title:(kitty)"
+      "workspace 8, class:(Alacritty),title:(alacritty)"
       "workspace 9, class:(Logseq),title:(logseq)"
       "workspace 10, class:(Discord),title:(discord)"
     ];
