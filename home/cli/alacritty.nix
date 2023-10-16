@@ -9,10 +9,66 @@ in {
 
 		settings = {
 
+			window = {
+				#dimensions = {
+				#	columns = 0;
+				#	lines = 0;
+				#};
+
+				#position = {
+				#	x = 0;
+				#	y = 0;
+				#};
+
+				padding = {
+					x = 2;
+					y = 2;
+				};
+
+				#decoration = "none";
+				#opacity =  0.90;
+				#startup_mode = "Windowed";
+				#title = "Alacritty";
+				#dynamic_title = true;
+				#class = {
+				#	instance = "Alacritty";
+				#	general = "Alacritty";
+				#};
+				#decoration_theme_variant = "none";
+			};
+
+			scrolling = {
+				history = 10000;
+				multiplier = 3;
+			};
+
 			font = {
 				normal = {
 					family = config.fontProfiles.monospace.family;
+					style = "Regular";
 				};
+				#bold = {
+				#	family = "";
+				#	style = "Bold";
+				#};
+				#italic = {
+				#	family = "";
+				#	style = "Italic";
+				#};
+				#bold_italic = {
+				#	family = "";
+				#	style = "Bold Italic";
+				#};
+				size = 11.0;
+				#offset = {
+				#	x = 0;
+				#	y = 0;
+				#};
+				#glyph_offset = {
+				#	x = 0;
+				#	y = 0;
+				#};
+
 			};
 
 			colors = {
@@ -91,8 +147,17 @@ in {
 					cyan = "#${colors.base0C}";
 					white = "#${colors.base05}";
 				};
-
 			};
+
+			bell = {
+				animation = "EaseOutExpo";
+				duration = 0;
+				command = "None";
+			};
+
+			#selection = {
+			#	save_to_clipboard = false;
+			#};
 		};
 	};
 }
