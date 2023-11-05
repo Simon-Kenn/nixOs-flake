@@ -18,8 +18,6 @@ in {
       border_size = 2;
       "col.active_border" = "0xFF${colors.base0D}";
       "col.inactive_border" = "0xFF${colors.base02}";
-      "col.group_border_active" = "0xFF${colors.base0D}";
-      "col.group_border" = "0xFF${colors.base04}";
 
       resize_on_border = true;
       hover_icon_on_border = true;
@@ -40,7 +38,6 @@ in {
 
     decoration = {
       rounding = 5;
-      multisample_edges = 1;
 
       active_opacity = 0.85;
       inactive_opacity = 0.70;

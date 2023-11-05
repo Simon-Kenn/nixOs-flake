@@ -11,8 +11,6 @@
 		libreoffice-qt
 		hunspell
 		hunspellDicts.fr-any
-		calibre
-		zotero
 		pavucontrol
 	];
 }
