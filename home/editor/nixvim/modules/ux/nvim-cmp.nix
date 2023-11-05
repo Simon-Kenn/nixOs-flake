@@ -4,6 +4,7 @@
 
     sources = [
 			{name = "nvim_lsp";}
+			{name = "luasnip";}
       {name = "path";}
       {name = "buffer";}
 			{name = "nvim-lua";}
@@ -17,6 +18,7 @@
 				action = "cmp.mapping.complete({select = true})";
 			};
       "<Tab>" = {
+				modes = ["i" "s"];
         action = ''
           function(fallback)
             if cmp.visible() then

@@ -10,5 +10,6 @@
 		./comment-nvim.nix
 		./notify.nix
 		./neo-tree.nix
+		./luasnip.nix
   ];
 }

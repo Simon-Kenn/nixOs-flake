@@ -1,12 +1,11 @@
 {
   pkgs,
-  host,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
     ../common
-    ../common/shells/${host.shell}.nix
+    #../common/shells/nushell.nix
     ../users/simon.nix
   ];
 

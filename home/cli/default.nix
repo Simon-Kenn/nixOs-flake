@@ -4,9 +4,11 @@
 }: {
   imports = [
 		./alacritty.nix
-		./fish.nix
-    ./git.nix
+		./nushell.nix
     ./starship.nix
+		./zellij.nix
+    ./git.nix
+		./direnv.nix
     ./bat.nix
 		./bottom.nix
   ];

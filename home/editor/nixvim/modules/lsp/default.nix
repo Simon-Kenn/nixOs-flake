@@ -17,6 +17,7 @@
 			tsserver.enable = true;
 			eslint.enable = true;
 			jsonls.enable = true;
+			rust-analyzer.enable = true;
 
 			texlab.enable = true;
 			vuels.enable = true;
@@ -24,6 +25,10 @@
 	};
 
 	programs.nixvim.plugins.lspkind = {
+		enable = true;
+	};
+
+	programs.nixvim.plugins.rust-tools = {
 		enable = true;
 	};
 

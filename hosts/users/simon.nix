@@ -6,7 +6,7 @@
   users.users.${host.user} = {
     isNormalUser = true;
     extraGroups = ["wheel" "video" "audio" "kvm" "networkmanager"];
-    shell = pkgs.${host.shell};
+    shell = pkgs.nushell;
   };
 
   security.pam.services = {swaylock = {};};
