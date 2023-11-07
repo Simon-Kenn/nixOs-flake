@@ -8,7 +8,7 @@
     ./modules
   ];
 
-	home.sessionVariables.EIDITOR = "nvim";
+	home.sessionVariables.EDITOR = "nvim";
 
   programs.nixvim = {
     enable = true;

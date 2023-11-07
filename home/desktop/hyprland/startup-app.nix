@@ -8,7 +8,7 @@
       "${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"
     ];
     exec-once = [
-      "waybar & mako"
+      "waybar 2>&1 > ~/log.txt & mako"
 			"[workspace 1 silent] alacritty ~/Journal --hold sh -c nvim"
 			"[workspace 2 silent] alacritty ~/Notes --hold sh -c nvim"
 			"[workspace 3 silent] alacritty ~/Org"

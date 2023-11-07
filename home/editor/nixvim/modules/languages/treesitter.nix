@@ -3,6 +3,7 @@
 		enable = true;
     nixGrammars = true;
     ensureInstalled = "all";
+		nixvimInjections = true;
   };
 
 	programs.nixvim.plugins.rainbow-delimiters = {

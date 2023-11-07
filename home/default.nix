@@ -21,13 +21,6 @@
     homeDirectory = "/home/${host.user}";
 
     stateVersion = "23.05";
-
-    packages = with pkgs; [
-      # Apps
-      google-chrome
-      logseq
-      obsidian
-    ];
   };
 
   programs = {

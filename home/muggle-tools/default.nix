@@ -2,7 +2,7 @@
   imports = [
     ./firefox.nix
     ./discord.nix
-		./zathura.nix
+		#./zathura.nix
 		./sioyek.nix
   ];
 

@@ -51,9 +51,7 @@
         "custom/hostname" = custom-hostname;
       };
     };
-    style = let
-      inherit (config.colorscheme) colors;
-    in ''
+    style = let inherit (config.colorscheme) colors; in ''
 			@define-color accent #${colors.base0D};
       * {
         font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
