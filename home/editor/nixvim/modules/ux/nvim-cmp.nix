@@ -2,14 +2,14 @@
   programs.nixvim.plugins.nvim-cmp = {
     enable = true;
 
+		snippet.expand = "luasnip";
     sources = [
 			{name = "nvim_lsp";}
+			{name = "nvim-lua";}
 			{name = "luasnip";}
       {name = "path";}
-      {name = "buffer";}
-			{name = "nvim-lua";}
-			{name = "cmp-ledger";}
 			{name = "neorg";}
+      {name = "buffer"; keywordLength = 5;}
     ];
     mapping = {
       "<CR>" = "cmp.mapping.confirm({ select = true })";
