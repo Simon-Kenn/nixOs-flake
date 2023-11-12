@@ -11,6 +11,7 @@
 		./direnv.nix
     ./bat.nix
 		./bottom.nix
+		./gpg.nix
   ];
 
   home.packages = with pkgs; [
