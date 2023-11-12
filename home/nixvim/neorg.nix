@@ -25,7 +25,7 @@
 						workspace = "home";
 					};
 				};
-        "core.ui.calendar" = {__empty = null;};
+        #"core.ui.calendar" = {__empty = null;};
 
 				"core.completion" = {
           config = {
