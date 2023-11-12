@@ -4,6 +4,8 @@
     nixGrammars = true;
     ensureInstalled = "all";
 		nixvimInjections = true;
+		indent = true;
+		folding = true;
   };
 
 	programs.nixvim.plugins.rainbow-delimiters = {

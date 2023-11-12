@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{
+	pkgs, ...}: {
   imports = [
     ./modules
   ];
@@ -16,7 +17,7 @@
       nvim-treesitter.withAllGrammars
     ];
 
-    extraLuaConfig = ''
+    extraLuaConfig= ''
       require("nvim-treesitter.configs").setup {
         highlight = {
           enable = true

@@ -1,6 +1,37 @@
 {
   programs.nixvim = { 
 		keymaps = [
+			# Luasnip
+			{
+				key = "<c-s>";
+				action = ''
+					function()
+						if ls.expand_or_jumpable() then
+							ls.expand_or_jump()
+						end
+					end
+				'';
+			}
+			{
+				key = "<c-r>";
+				action = ''
+					function()
+						if ls.jumpable(-1) then
+							ls.jump(-1)
+						end
+					end
+				'';
+			}
+			{
+				key = "<C-n>";
+				action = ''
+					function()
+						if ls.choice_active() then
+							ls.change_choice(1)
+						end
+					end
+				'';
+			}
 			# Divers
     	{ key = "<Tab>"; action  = "za"; }
 			{ key = "<CR>"; action = "zz"; } 
@@ -21,7 +52,7 @@
 					desc = "Tampon précédant"; 
 				}; 
 			}
-			{ key = "<A-é>"; action = "<cmd>BufferNext<CR>"; 
+			{ key = "<A-p>"; action = "<cmd>BufferNext<CR>"; 
 				options = { 
 					silent = true; 
 					desc = "Tampon suivant"; 
@@ -223,7 +254,7 @@
 	 					"gD" = "references";
 	 					"gt" = "type_definition";
 	 					"gi" = "implementation";
-	 					"K" = "hover";
+	 					";" = "hover";
 	 				};
 	 			};
 		};
