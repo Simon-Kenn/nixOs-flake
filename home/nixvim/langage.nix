@@ -16,7 +16,10 @@
 				vuels.enable = true;
 				bashls.enable = true;
 				cssls.enable = true;
-				ltex.enable = true;
+				ltex = {
+					enable = true;
+					settings.language = "fr";
+				};
 				taplo.enable = true;
 				
 			};
