@@ -1,8 +1,8 @@
 { host, ...}:{
   programs.nixvim = {
 		globals = {
-			globals.mapleader = " ";
-    	globals.maplocalleader = ",";
+			mapleader = " ";
+    	maplocalleader = ",";
 		};
 
 		options = {
