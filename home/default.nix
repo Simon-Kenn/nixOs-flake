@@ -6,7 +6,6 @@
   imports = [
 		./desktop
     ./cli
-    ./muggle-tools
 		./productivity
 		./nixvim
   ];
