@@ -2,10 +2,10 @@
   imports = [
     ./core
 		./keymaps 
-		./languages
-		./lsp
-    ./ux
-		./ui
+		#./languages
+		#./lsp
+    #./ux
+		#./ui
 		./neorg
 		./git 
   ];
