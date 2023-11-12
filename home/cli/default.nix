@@ -12,6 +12,7 @@
     ./bat.nix
 		./bottom.nix
 		./gpg.nix
+		./ssh.nix
   ];
 
   home.packages = with pkgs; [
