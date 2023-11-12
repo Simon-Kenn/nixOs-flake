@@ -1,5 +1,4 @@
 {
-  pkgs,
   host,
   outputs,
   ...
@@ -7,9 +6,9 @@
   imports = [
 		./desktop
     ./cli
-		./editor 
     ./muggle-tools
 		./productivity
+		./nixvim
   ];
   nixpkgs = {
     config = {allowUnfree = true;};
