@@ -1,4 +1,4 @@
-{ pkgs, inputs, host, ... }:
+{ pkgs, inputs, host, self, ... }:
 {
   nix = {
     settings = {
@@ -12,7 +12,10 @@
     };
 
     package = pkgs.nixVersions.unstable;
-    registry.nixpkgs.flake = inputs.nixpkgs;
+    registry = { 
+			nixpkgs.flake = inputs.nixpkgs;
+			babel.flake = self;
+		};
 
     extraOptions = ''
       experimental-features = nix-command flakes

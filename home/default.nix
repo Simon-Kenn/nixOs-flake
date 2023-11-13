@@ -1,6 +1,6 @@
 {
   host,
-  outputs,
+	overlays,
   ...
 }: {
   imports = [
@@ -11,7 +11,7 @@
   ];
   nixpkgs = {
     config = {allowUnfree = true;};
-    overlays = outputs.overlays;
+    overlays = overlays;
   };
 
   home = {

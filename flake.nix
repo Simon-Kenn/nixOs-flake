@@ -68,12 +68,18 @@
 
     lib = nixpkgs.lib;
   in {
-    overlays = overlays;
+		templates = {
+			rust-hello = {
+				path = ./templates/rust;
+				description = "A rust template";
+			};
+		};
     homeManagerModules = import ./modules/home-manager;
+		
 
     nixosConfigurations = {
       babel = lib.nixosSystem {
-        specialArgs = {inherit inputs outputs host;};
+        specialArgs = {inherit inputs outputs host self ;};
         modules = [
           ./hosts/babel
 
@@ -81,7 +87,7 @@
           {
             home-manager.useGlobalPkgs = false;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs outputs host;};
+            home-manager.extraSpecialArgs = {inherit inputs outputs overlays host;};
             home-manager.users.${host.user} = import ./home/default.nix;
           }
         ];

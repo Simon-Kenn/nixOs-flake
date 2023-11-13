@@ -49,8 +49,13 @@
 				updateevents = "TextChanged,TextChangedI";
 				enable_autosnippets = true;
 			};
-			fromLua = [
+			fromVscode = [
 				{}
+				{
+					paths = ./luasnip.lua;
+				}
+			];
+			fromLua = [
 				{
 					paths = ./luasnip.lua;
 				}
