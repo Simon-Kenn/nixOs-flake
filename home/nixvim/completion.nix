@@ -1,5 +1,19 @@
 {
 	programs.nixvim.plugins = {
+		luasnip = {
+			enable = true;
+			extraConfig = {
+				history = true;
+				updateevents = "TextChanged,TextChangedI";
+				enable_autosnippets = true;
+			};
+			fromLua = [
+			  {}
+				{
+					paths = ./snippets;
+				}
+			];
+		};
 		nvim-cmp = {
 			enable = true;
 
@@ -11,6 +25,8 @@
     	  {name = "path";}
 				{name = "neorg";}
     	  {name = "buffer"; keywordLength = 5;}
+				{name = "cmdline";}
+				{name = "cmp-cmdline-history";}
     	];
     	mapping = {
 				"<C-d>" = "cmp.mapping.scroll_docs(-4)";
@@ -18,48 +34,33 @@
     	  "<CR>" = "cmp.mapping.confirm({ select = true })";
     	  "<Tab>" = {
 					modes = ["i" "s"];
-    	    action = ''
+    	    action = /* lua */ ''
     	      function(fallback)
-    	        if cmp.visible() then
-    	          cmp.select_next_item()
-    	        else
-    	          fallback()
-    	        end
+						  luasnip = require('luasnip')
+							if cmp.visible() then
+      				  cmp.select_next_item()
+      				elseif luasnip.expandable() then
+      				  luasnip.expand()
+      				elseif luasnip.expand_or_jumpable() then
+      				  luasnip.expand_or_jump()
+      				else
+      				  fallback()
+      				end
     	      end
     	    '';
     	  };
 				"<S-Tab>" = {
     	    action = ''
     	      function(fallback)
-    	        if cmp.visible() then
-    	          cmp.select_prev_item()
-    	        else
-    	          fallback()
-    	        end
+							if cmp.visible() then
+      				  cmp.select_prev_item()
+      				else
+      				  fallback()
+      				end
     	      end
     	    '';
     	  };
     	};
-		};
-		
-		luasnip = {
-			enable = true;
-			extraConfig = {
-				history = true;
-				updateevents = "TextChanged,TextChangedI";
-				enable_autosnippets = true;
-			};
-			fromVscode = [
-				{}
-				{
-					paths = ./luasnip.lua;
-				}
-			];
-			fromLua = [
-				{
-					paths = ./luasnip.lua;
-				}
-			];
 		};
 	};
 }
