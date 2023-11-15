@@ -2,5 +2,5 @@
   imports = [
     outputs.homeManagerModules.wallpaper
   ];
-  wallpaper = ../../../assets/wallpapers/landscapes/metheor.png;
+  wallpaper = ../../../assets/wallpapers/alena-aenami-far-from-tomorrow-1080px.jpg;
 }
