@@ -5,7 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     ../common
-    #../common/shells/nushell.nix
+    ../common/shells/fish.nix
     ../users/simon.nix
   ];
 

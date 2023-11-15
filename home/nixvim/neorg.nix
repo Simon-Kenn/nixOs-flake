@@ -6,6 +6,11 @@
 
       modules = {
         "core.defaults" = {__empty = null;};
+				"core.esupports.metagen" = {
+					config = {
+						type = "auto";
+					};
+				};
 				"core.dirman" = {
           config = {
             workspaces = {

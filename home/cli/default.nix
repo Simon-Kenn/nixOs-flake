@@ -4,7 +4,7 @@
 }: {
   imports = [
 		./alacritty.nix
-		./nushell.nix
+		./fish.nix
     ./starship.nix
 		./zellij.nix
     ./git.nix
@@ -26,5 +26,6 @@
 		feh
 		neofetch
 		ranger
+		sops
   ];
 }
