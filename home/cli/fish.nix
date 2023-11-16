@@ -14,7 +14,7 @@ in {
     shellAbbrs = {
       g = "git";
       gcl = "git clone";
-      v = "vim";
+      v = "nvim";
       neorg = "nvim";
 
       ll = "ls -l";

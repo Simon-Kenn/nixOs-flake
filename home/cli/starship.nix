@@ -4,6 +4,7 @@
 
     enableBashIntegration = true;
     enableZshIntegration = true;
+		enableFishIntegration = true;
 
     settings = {
       format = let
