@@ -1,36 +1,7 @@
 keys:
-    - ENC[AES256_GCM,data:DWiKEViiestmVvtu6QX2rf+YNFo/C+lIIM1meWittoFENtO/vLWT1KuxSOGtGiq5ip4=,iv:/P5yGtnwt1CaVmbwkfHUp53D8n8uiHnGcO3T5L4WKMc=,tag:kEmHsP2XGb/smOCnFl9cfQ==,type:str]
+  - &test_user AAB4 7353 0339 2BCE 0DF8  567E E4D3 E428 059D 91E2
 creation_rules:
-    - path_regex: ENC[AES256_GCM,data:ruDCz4x4q4NTAVGRM3YD9SdkAQaerFzK6JlBdKn756JHiew=,iv:0rBGK/ugqd1FzVcDlcXzQHq0NJGVoVbXmMqOizIDGpY=,tag:WR79HE/a6at53BjuqH6Cpw==,type:str]
-      key_groups:
-        - pgp:
-            - ENC[AES256_GCM,data:oHVfJOIzp2H3FzXpJb5QtEtzPP8PIqpRjrCVh0FQkhQJbNVBKZWCtYAmHf+8IzKRdP4=,iv:YZXrwnt+sxnF0+UcdFJF9h1gQnM/ZVW41DJE36IRZOA=,tag:oiTGMzy5dWXRiWBe1fVhhw==,type:str]
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age: []
-    lastmodified: "2023-11-15T17:00:14Z"
-    mac: ENC[AES256_GCM,data:VcU6khisvnm980lkPGv8X8Z2EcCjXpx2maT8Z1gzYJXSV5Oa6wP3gcNEMp1qcMLYxJEgfmYIbLRmEZmG19ACrea8ZAu+rpuuOVe6PEnynnJZ8+9pdZMJMkVuu6x3T5ixGw7RW6bUiWf0Bu5aoGxvGe/mwAHQ9O19r3qQz/Rexns=,iv:t06vKOAyJYVDjKFPifTec14pLdCGetl3Lv9UJmYMgCE=,tag:Hxw0pchPi/WvXiJVyfBP+Q==,type:str]
-    pgp:
-        - created_at: "2023-11-15T16:58:00Z"
-          enc: |-
-            -----BEGIN PGP MESSAGE-----
-
-            hQGMA1k7/fKUrm0UAQv/YonWI5vWBtWeRKqRkH1g76hlN+nlZYxOYjol1KPKasVQ
-            HCuEjZihWfD3FHoCGjZlP7K56dB5MA9eoiL0laPJwrh9+dI2z5qcC6cC7eptpjgb
-            ANi2akN8idHCkwWkbG7rFNgZZlI5bUQw1vxP9ffm9cobOCa9KpTGGZ6x0wU4YvWW
-            xduVVrXp13sTqPRkzsVQaume+kcYqo1uwzxp8g75Mf+rhN98WV7hxz3YuikzuF28
-            Zep+6CYnGxK69tafPrXJOjlN7+/JBRmlAwkjrjQ6Vt8SY0mSt6wizQt9BuuUyWn8
-            FlX4l7loVlZjKyevnaS75u75jsx9Q0A2dYUErRJOQijnvOGXKAlSwzdUrLzsfGEa
-            WZI2yF6X8gFIAVJO8JFznV1XP040ai/QrE2bsXHxc7TZVi6JXZ/W/3zONAnHPfWq
-            gKtWPb097lhei3MSHZY0t0/8C444RLj1j3oxLO3fzfejjY92rbkHlkKBZVB65oSr
-            jNgZpgg3d6Rwd605yKMm0l4BcHkAdDn2ieQc+hhF9Y2F39kJkjtnWPyfMRDagkni
-            w/C3bK0kK+EgstarfWG7Ua101Nj4ThaxtadaQmLrf3RZKGsm5EufiWZIprpWna0S
-            zkM8fukWCib7z3XbTZ1D
-            =ivB1
-            -----END PGP MESSAGE-----
-          fp: 91560BD5223DFFB68B62B0EEEC05D262C1FFA15B
-    unencrypted_suffix: _unencrypted
-    version: 3.8.1
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - pgp:
+        - *test_user

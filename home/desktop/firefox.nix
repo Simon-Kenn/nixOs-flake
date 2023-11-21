@@ -1,14 +1,12 @@
-{ pkgs, ...}: {
+{ inputs, ...}: {
 	home.sessionVariables.BROWSER = "firefox";
   programs.firefox = {
     enable = true;
 		profiles.simon = {
 			bookmarks = { };
-			#extensions = with pkgs.inputs.firefox-addons; [
-			#	ublock-origin
-			##	browserpass
-		#	#	bitwarden
-			#];
+			extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        bitwarden
+      ];
 			settings = {
 				"browser.startup.homepage" = "https://start.duckduckgo.com";
 				"browser.contentblockings.category" = true;
