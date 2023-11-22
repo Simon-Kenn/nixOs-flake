@@ -1,10 +1,11 @@
-{ inputs, ...}: {
+{ inputs, pkgs, ...}: {
 	home.sessionVariables.BROWSER = "firefox";
   programs.firefox = {
     enable = true;
 		profiles.simon = {
 			bookmarks = { };
-			extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+			extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+				ublock-origin
         bitwarden
       ];
 			settings = {
