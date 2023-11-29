@@ -1,7 +1,7 @@
 {
 	imports = [
 		./ledger.nix
-		./papis.nix
-		./taskwarior.nix
+		#./papis.nix
+		#./taskwarior.nix
 	];
 }
