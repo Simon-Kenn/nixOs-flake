@@ -5,5 +5,6 @@
     ./locale.nix
     ./console.nix
     ./packages.nix
+		./sops.nix
   ];
 }

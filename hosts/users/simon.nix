@@ -10,17 +10,12 @@
     shell = pkgs.fish;
   };
 
-	users.users.testUser = {
-		isNormalUser = true;
-		shell = pkgs.fish;
-		hashedPasswordFile = config.sops.secrets.test-user-password.path;
-	};
-
-	sops.secrets.test-user-password = {
-		sopsFile = ../../secrets/secrets.yaml;
-		neededForUsers = true;
-	};
-
+	#sops.secrets.password.neededForUsers = true;
+	#users.users.testUser = {
+	#	isNormalUser = true;
+	#	shell = pkgs.fish;
+	#	hashedPasswordFile = config.sops.secrets.password.path;
+	#};
 
   security.pam.services = {swaylock = {};};
 }
