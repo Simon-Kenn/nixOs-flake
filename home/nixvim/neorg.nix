@@ -1,5 +1,5 @@
-{
-  programs.nixvim.plugins = {
+ { 
+	programs.nixvim.plugins = {
 		neorg = {
       enable = true;
 			lazyLoading = false;
@@ -27,7 +27,7 @@
 					config = {
 						journal_folder = "Journal";
 						strategy = "nested";
-						workspace = "home";
+						workspace = "notes";
 					};
 				};
         #"core.ui.calendar" = {__empty = null;};
@@ -44,6 +44,7 @@
 
         "core.integrations.telescope" = {__empty = null;};
 				"core.integrations.nvim-cmp" = {__empty = null;};
+				"external.templates" = {__empty = null;};
       };
     };
   };
