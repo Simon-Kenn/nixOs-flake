@@ -8,8 +8,7 @@
       "${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"
     ];
     exec-once = [
-      "waybar 2>&1 > ~/log.txt & mako"
-
+      "${pkgs.waybar}/bin/waybar && ${pkgs.mako}/bin/mako"
 			"[workspace 7 silent] firefox"
 			"[workspace 8 silent] discord"
     ];

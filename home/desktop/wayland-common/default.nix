@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [
     #./kitty.nix
 		#./zellij.nix
@@ -10,4 +10,8 @@
     ./swaylock.nix
 		./qutebrowser.nix
   ];
+
+	home.packages = with pkgs; [
+		wl-clipboard
+	]; 
 }
