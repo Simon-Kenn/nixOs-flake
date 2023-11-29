@@ -5,10 +5,11 @@
 }: {
   imports = [
 		./desktop
-    ./cli
+    ./cli 
 		./productivity
 		./nixvim
   ];
+
   nixpkgs = {
     config = {allowUnfree = true;};
     overlays = overlays;
